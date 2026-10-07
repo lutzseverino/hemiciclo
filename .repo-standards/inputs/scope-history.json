@@ -1,0 +1,1252 @@
+{
+  "format": "repo-standards/scope-history/v5",
+  "evidence": "historical",
+  "inspection": "sha256:4446d01c627cc63baae1790fd4b03646c7458c5c8dfaad9a28a1cee500799d5f",
+  "resolved": {
+    "description": "The complete Repo Canon standards profile",
+    "declarations": [
+      {
+        "id": "agent-configuration-index",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/README.md",
+        "exact": "docs/agents/README.md"
+      },
+      {
+        "id": "agent-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "AGENTS.md",
+        "exact": "AGENTS.md"
+      },
+      {
+        "id": "bug-report-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/bug-report.yml",
+        "exact": ".github/ISSUE_TEMPLATE/bug-report.yml"
+      },
+      {
+        "id": "contribution-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "CONTRIBUTING.md",
+        "exact": "CONTRIBUTING.md"
+      },
+      {
+        "id": "documentation",
+        "checks": [
+          {
+            "id": "documentation-navigation",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-documentation.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "operations/lib/documentation-model.mjs",
+                "discovery/draft-documentation-scope.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/documentation.md",
+        "targets": {
+          "paths": [
+            "docs/README.md",
+            "docs/development/README.md"
+          ],
+          "directories": []
+        }
+      },
+      {
+        "id": "domain-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/domain.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/domain.md"
+      },
+      {
+        "id": "feature-request-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/feature-request.yml",
+        "exact": ".github/ISSUE_TEMPLATE/feature-request.yml"
+      },
+      {
+        "id": "github-repository-configuration",
+        "checks": [],
+        "fixes": [
+          {
+            "id": "canonical-labels",
+            "run": {
+              "executable": "node",
+              "script": "operations/setup-github-labels.mjs",
+              "resources": [
+                "operations/lib/github-operation.mjs",
+                "LICENSE",
+                "THIRD_PARTY_NOTICES.md",
+                "vendor/mattpocock-skills/LICENSE"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          },
+          {
+            "id": "pull-request-integration",
+            "run": {
+              "executable": "node",
+              "script": "operations/setup-github-pr-integration.mjs",
+              "resources": [
+                "operations/lib/github-operation.mjs"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "kind": "repository",
+        "guidance": "guidance/github-repository-configuration.md",
+        "targets": {
+          "paths": [],
+          "directories": []
+        }
+      },
+      {
+        "id": "implementation-ticket-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/implementation-ticket.yml",
+        "exact": ".github/ISSUE_TEMPLATE/implementation-ticket.yml"
+      },
+      {
+        "id": "issue-contract-validator",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "scripts/validate-issue-contract.mjs",
+        "exact": "scripts/validate-issue-contract.mjs"
+      },
+      {
+        "id": "issue-contract-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/issue-contracts.yml",
+        "exact": ".github/workflows/issue-contracts.yml"
+      },
+      {
+        "id": "issue-tracker-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/issue-tracker.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md"
+      },
+      {
+        "id": "marked-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/LICENSE",
+        "exact": "vendor/marked/LICENSE"
+      },
+      {
+        "id": "marked-parser",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/marked.esm.js",
+        "exact": "vendor/marked/marked.esm.js"
+      },
+      {
+        "id": "marked-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/README.md",
+        "exact": "vendor/marked/README.md"
+      },
+      {
+        "id": "mattpocock-skills-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".agents/skills/LICENSE.mattpocock-skills",
+        "exact": "vendor/mattpocock-skills/LICENSE"
+      },
+      {
+        "id": "parse5-entities-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/LICENSE.entities",
+        "exact": "vendor/parse5/LICENSE.entities"
+      },
+      {
+        "id": "parse5-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/LICENSE.parse5",
+        "exact": "vendor/parse5/LICENSE.parse5"
+      },
+      {
+        "id": "parse5-parser",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/parse5.esm.js",
+        "exact": "vendor/parse5/parse5.esm.js"
+      },
+      {
+        "id": "parse5-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/README.md",
+        "exact": "vendor/parse5/README.md"
+      },
+      {
+        "id": "pr-metadata-validator",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/scripts/validate-pr-metadata.mjs",
+        "exact": ".github/scripts/validate-pr-metadata.mjs"
+      },
+      {
+        "id": "pr-metadata-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/pr-metadata.yml",
+        "exact": ".github/workflows/pr-metadata.yml"
+      },
+      {
+        "id": "project-readmes",
+        "checks": [
+          {
+            "id": "project-readme-structure",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-project-readmes.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/project-readmes.md",
+        "targets": {
+          "paths": [],
+          "directories": []
+        }
+      },
+      {
+        "id": "pull-request-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/PULL_REQUEST_TEMPLATE.md",
+        "exact": ".github/PULL_REQUEST_TEMPLATE.md"
+      },
+      {
+        "id": "rendered-markdown-runtime",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "operations/lib/rendered-markdown.mjs",
+        "exact": "operations/lib/rendered-markdown.mjs"
+      },
+      {
+        "id": "repository-readme",
+        "checks": [
+          {
+            "id": "repository-readme-structure",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-repository-readme.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "file",
+        "target": "README.md",
+        "guidance": "guidance/repository-readme.md"
+      },
+      {
+        "id": "skill-ask-matt",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "ask-matt",
+        "source": "vendor/mattpocock-skills/skills/engineering/ask-matt"
+      },
+      {
+        "id": "skill-code-review",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "code-review",
+        "source": "vendor/mattpocock-skills/skills/engineering/code-review"
+      },
+      {
+        "id": "skill-codebase-design",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "codebase-design",
+        "source": "vendor/mattpocock-skills/skills/engineering/codebase-design"
+      },
+      {
+        "id": "skill-deliver",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "deliver",
+        "source": ".agents/skills/deliver"
+      },
+      {
+        "id": "skill-diagnosing-bugs",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "diagnosing-bugs",
+        "source": "vendor/mattpocock-skills/skills/engineering/diagnosing-bugs"
+      },
+      {
+        "id": "skill-domain-modeling",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "domain-modeling",
+        "source": "vendor/mattpocock-skills/skills/engineering/domain-modeling"
+      },
+      {
+        "id": "skill-grill-me",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grill-me",
+        "source": "vendor/mattpocock-skills/skills/productivity/grill-me"
+      },
+      {
+        "id": "skill-grill-with-docs",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grill-with-docs",
+        "source": "vendor/mattpocock-skills/skills/engineering/grill-with-docs"
+      },
+      {
+        "id": "skill-grilling",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grilling",
+        "source": "vendor/mattpocock-skills/skills/productivity/grilling"
+      },
+      {
+        "id": "skill-handoff",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "handoff",
+        "source": "vendor/mattpocock-skills/skills/productivity/handoff"
+      },
+      {
+        "id": "skill-implement",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "implement",
+        "source": "vendor/mattpocock-skills/skills/engineering/implement"
+      },
+      {
+        "id": "skill-improve-codebase-architecture",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "improve-codebase-architecture",
+        "source": "vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture"
+      },
+      {
+        "id": "skill-prototype",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "prototype",
+        "source": "vendor/mattpocock-skills/skills/engineering/prototype"
+      },
+      {
+        "id": "skill-research",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "research",
+        "source": "vendor/mattpocock-skills/skills/engineering/research"
+      },
+      {
+        "id": "skill-resolving-merge-conflicts",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "resolving-merge-conflicts",
+        "source": "vendor/mattpocock-skills/skills/engineering/resolving-merge-conflicts"
+      },
+      {
+        "id": "skill-setup-matt-pocock-skills",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "setup-matt-pocock-skills",
+        "source": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills"
+      },
+      {
+        "id": "skill-tdd",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "tdd",
+        "source": "vendor/mattpocock-skills/skills/engineering/tdd"
+      },
+      {
+        "id": "skill-teach",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "teach",
+        "source": "vendor/mattpocock-skills/skills/productivity/teach"
+      },
+      {
+        "id": "skill-to-questionnaire",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-questionnaire",
+        "source": "vendor/mattpocock-skills/skills/productivity/to-questionnaire"
+      },
+      {
+        "id": "skill-to-spec",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-spec",
+        "source": "vendor/mattpocock-skills/skills/engineering/to-spec"
+      },
+      {
+        "id": "skill-to-tickets",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-tickets",
+        "source": "vendor/mattpocock-skills/skills/engineering/to-tickets"
+      },
+      {
+        "id": "skill-triage",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "triage",
+        "source": "vendor/mattpocock-skills/skills/engineering/triage"
+      },
+      {
+        "id": "skill-wait-what",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wait-what",
+        "source": "vendor/mattpocock-skills/skills/productivity/wait-what"
+      },
+      {
+        "id": "skill-wayfinder",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wayfinder",
+        "source": "vendor/mattpocock-skills/skills/engineering/wayfinder"
+      },
+      {
+        "id": "skill-wizard",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wizard",
+        "source": "vendor/mattpocock-skills/skills/engineering/wizard"
+      },
+      {
+        "id": "skill-writing-for-agents",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "writing-for-agents",
+        "source": "vendor/mattpocock-skills/skills/productivity/writing-for-agents"
+      },
+      {
+        "id": "specification-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/specification.yml",
+        "exact": ".github/ISSUE_TEMPLATE/specification.yml"
+      },
+      {
+        "id": "triage-label-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/triage-labels.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/triage-labels.md"
+      }
+    ]
+  },
+  "sourceResolved": {
+    "description": "The complete Repo Canon standards profile",
+    "declarations": [
+      {
+        "id": "agent-configuration-index",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/README.md",
+        "exact": "docs/agents/README.md"
+      },
+      {
+        "id": "agent-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "AGENTS.md",
+        "exact": "AGENTS.md"
+      },
+      {
+        "id": "bug-report-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/bug-report.yml",
+        "exact": ".github/ISSUE_TEMPLATE/bug-report.yml"
+      },
+      {
+        "id": "contribution-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "CONTRIBUTING.md",
+        "exact": "CONTRIBUTING.md"
+      },
+      {
+        "id": "documentation",
+        "checks": [
+          {
+            "id": "documentation-navigation",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-documentation.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "operations/lib/documentation-model.mjs",
+                "discovery/draft-documentation-scope.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/documentation.md",
+        "discovery": "discovery/documentation.md"
+      },
+      {
+        "id": "domain-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/domain.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/domain.md"
+      },
+      {
+        "id": "feature-request-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/feature-request.yml",
+        "exact": ".github/ISSUE_TEMPLATE/feature-request.yml"
+      },
+      {
+        "id": "github-repository-configuration",
+        "checks": [],
+        "fixes": [
+          {
+            "id": "canonical-labels",
+            "run": {
+              "executable": "node",
+              "script": "operations/setup-github-labels.mjs",
+              "resources": [
+                "operations/lib/github-operation.mjs",
+                "LICENSE",
+                "THIRD_PARTY_NOTICES.md",
+                "vendor/mattpocock-skills/LICENSE"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          },
+          {
+            "id": "pull-request-integration",
+            "run": {
+              "executable": "node",
+              "script": "operations/setup-github-pr-integration.mjs",
+              "resources": [
+                "operations/lib/github-operation.mjs"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "kind": "repository",
+        "guidance": "guidance/github-repository-configuration.md",
+        "discovery": "discovery/github-repository-configuration.md"
+      },
+      {
+        "id": "implementation-ticket-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/implementation-ticket.yml",
+        "exact": ".github/ISSUE_TEMPLATE/implementation-ticket.yml"
+      },
+      {
+        "id": "issue-contract-validator",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "scripts/validate-issue-contract.mjs",
+        "exact": "scripts/validate-issue-contract.mjs"
+      },
+      {
+        "id": "issue-contract-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/issue-contracts.yml",
+        "exact": ".github/workflows/issue-contracts.yml"
+      },
+      {
+        "id": "issue-tracker-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/issue-tracker.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md"
+      },
+      {
+        "id": "marked-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/LICENSE",
+        "exact": "vendor/marked/LICENSE"
+      },
+      {
+        "id": "marked-parser",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/marked.esm.js",
+        "exact": "vendor/marked/marked.esm.js"
+      },
+      {
+        "id": "marked-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/marked/README.md",
+        "exact": "vendor/marked/README.md"
+      },
+      {
+        "id": "mattpocock-skills-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".agents/skills/LICENSE.mattpocock-skills",
+        "exact": "vendor/mattpocock-skills/LICENSE"
+      },
+      {
+        "id": "parse5-entities-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/LICENSE.entities",
+        "exact": "vendor/parse5/LICENSE.entities"
+      },
+      {
+        "id": "parse5-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/LICENSE.parse5",
+        "exact": "vendor/parse5/LICENSE.parse5"
+      },
+      {
+        "id": "parse5-parser",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/parse5.esm.js",
+        "exact": "vendor/parse5/parse5.esm.js"
+      },
+      {
+        "id": "parse5-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/parse5/README.md",
+        "exact": "vendor/parse5/README.md"
+      },
+      {
+        "id": "pr-metadata-validator",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/scripts/validate-pr-metadata.mjs",
+        "exact": ".github/scripts/validate-pr-metadata.mjs"
+      },
+      {
+        "id": "pr-metadata-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/pr-metadata.yml",
+        "exact": ".github/workflows/pr-metadata.yml"
+      },
+      {
+        "id": "project-readmes",
+        "checks": [
+          {
+            "id": "project-readme-structure",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-project-readmes.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/project-readmes.md",
+        "discovery": "discovery/project-readmes.md"
+      },
+      {
+        "id": "pull-request-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/PULL_REQUEST_TEMPLATE.md",
+        "exact": ".github/PULL_REQUEST_TEMPLATE.md"
+      },
+      {
+        "id": "rendered-markdown-runtime",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "operations/lib/rendered-markdown.mjs",
+        "exact": "operations/lib/rendered-markdown.mjs"
+      },
+      {
+        "id": "repository-readme",
+        "checks": [
+          {
+            "id": "repository-readme-structure",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-repository-readme.mjs",
+              "resources": [
+                "operations/lib/rendered-markdown.mjs",
+                "operations/lib/local-markdown-links.mjs",
+                "vendor/marked",
+                "vendor/parse5"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "file",
+        "target": "README.md",
+        "guidance": "guidance/repository-readme.md"
+      },
+      {
+        "id": "skill-ask-matt",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "ask-matt",
+        "source": "vendor/mattpocock-skills/skills/engineering/ask-matt"
+      },
+      {
+        "id": "skill-code-review",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "code-review",
+        "source": "vendor/mattpocock-skills/skills/engineering/code-review"
+      },
+      {
+        "id": "skill-codebase-design",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "codebase-design",
+        "source": "vendor/mattpocock-skills/skills/engineering/codebase-design"
+      },
+      {
+        "id": "skill-deliver",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "deliver",
+        "source": ".agents/skills/deliver"
+      },
+      {
+        "id": "skill-diagnosing-bugs",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "diagnosing-bugs",
+        "source": "vendor/mattpocock-skills/skills/engineering/diagnosing-bugs"
+      },
+      {
+        "id": "skill-domain-modeling",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "domain-modeling",
+        "source": "vendor/mattpocock-skills/skills/engineering/domain-modeling"
+      },
+      {
+        "id": "skill-grill-me",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grill-me",
+        "source": "vendor/mattpocock-skills/skills/productivity/grill-me"
+      },
+      {
+        "id": "skill-grill-with-docs",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grill-with-docs",
+        "source": "vendor/mattpocock-skills/skills/engineering/grill-with-docs"
+      },
+      {
+        "id": "skill-grilling",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "grilling",
+        "source": "vendor/mattpocock-skills/skills/productivity/grilling"
+      },
+      {
+        "id": "skill-handoff",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "handoff",
+        "source": "vendor/mattpocock-skills/skills/productivity/handoff"
+      },
+      {
+        "id": "skill-implement",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "implement",
+        "source": "vendor/mattpocock-skills/skills/engineering/implement"
+      },
+      {
+        "id": "skill-improve-codebase-architecture",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "improve-codebase-architecture",
+        "source": "vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture"
+      },
+      {
+        "id": "skill-prototype",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "prototype",
+        "source": "vendor/mattpocock-skills/skills/engineering/prototype"
+      },
+      {
+        "id": "skill-research",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "research",
+        "source": "vendor/mattpocock-skills/skills/engineering/research"
+      },
+      {
+        "id": "skill-resolving-merge-conflicts",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "resolving-merge-conflicts",
+        "source": "vendor/mattpocock-skills/skills/engineering/resolving-merge-conflicts"
+      },
+      {
+        "id": "skill-setup-matt-pocock-skills",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "setup-matt-pocock-skills",
+        "source": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills"
+      },
+      {
+        "id": "skill-tdd",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "tdd",
+        "source": "vendor/mattpocock-skills/skills/engineering/tdd"
+      },
+      {
+        "id": "skill-teach",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "teach",
+        "source": "vendor/mattpocock-skills/skills/productivity/teach"
+      },
+      {
+        "id": "skill-to-questionnaire",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-questionnaire",
+        "source": "vendor/mattpocock-skills/skills/productivity/to-questionnaire"
+      },
+      {
+        "id": "skill-to-spec",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-spec",
+        "source": "vendor/mattpocock-skills/skills/engineering/to-spec"
+      },
+      {
+        "id": "skill-to-tickets",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "to-tickets",
+        "source": "vendor/mattpocock-skills/skills/engineering/to-tickets"
+      },
+      {
+        "id": "skill-triage",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "triage",
+        "source": "vendor/mattpocock-skills/skills/engineering/triage"
+      },
+      {
+        "id": "skill-wait-what",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wait-what",
+        "source": "vendor/mattpocock-skills/skills/productivity/wait-what"
+      },
+      {
+        "id": "skill-wayfinder",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wayfinder",
+        "source": "vendor/mattpocock-skills/skills/engineering/wayfinder"
+      },
+      {
+        "id": "skill-wizard",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "wizard",
+        "source": "vendor/mattpocock-skills/skills/engineering/wizard"
+      },
+      {
+        "id": "skill-writing-for-agents",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "writing-for-agents",
+        "source": "vendor/mattpocock-skills/skills/productivity/writing-for-agents"
+      },
+      {
+        "id": "specification-template",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/ISSUE_TEMPLATE/specification.yml",
+        "exact": ".github/ISSUE_TEMPLATE/specification.yml"
+      },
+      {
+        "id": "triage-label-configuration",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/triage-labels.md",
+        "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/triage-labels.md"
+      }
+    ]
+  },
+  "discovery": {
+    "identity": "sha256:ce5318a6057deeb6d848ed6c8cda888728d9179d27f11633517e59721617da07",
+    "proposal": {
+      "format": "repo-standards/scope/v2",
+      "declarations": [
+        {
+          "id": "documentation",
+          "coverage": "Drafted from the repository tree by `discovery/draft-documentation-scope.mjs` at Repo Canon v0.5.5: every file Git keeps under the documentation root `docs`, a new index for each of its directories without one, the development guide, and the domain glossaries and context maps the rules identify. The repository holds only README.md and LICENSE, so `docs` is the only documentation root and Git keeps nothing under it yet; the exact-owned `docs/agents/` files arrive with adoption. No CONTEXT.md, CONTEXT-MAP.md, other Markdown, moves, or link repairs exist. `docs/agents/project.md` is omitted because no repository-specific agent constraints exist yet. The two new indexes are created during contextual work without a separate first-content commit, since CLI 5.1.0 exempts included missing files from evidence and observes their absence.",
+          "candidates": [
+            {
+              "path": "docs/README.md",
+              "decision": "include",
+              "reason": "The index of the documentation root `docs`, to create.",
+              "evidence": []
+            },
+            {
+              "path": "docs/development/README.md",
+              "decision": "include",
+              "reason": "The development guide, which the contribution guide requires, to create.",
+              "evidence": []
+            }
+          ],
+          "unresolved": []
+        },
+        {
+          "id": "github-repository-configuration",
+          "coverage": "This declaration changes only remote GitHub configuration through its authored operations, so its project-content scope is intentionally empty. The only remote is origin, https://github.com/lutzseverino/hemiciclo.git, an unambiguous github.com repository on which the authenticated account lutzseverino holds admin permission.",
+          "candidates": [],
+          "unresolved": []
+        },
+        {
+          "id": "project-readmes",
+          "coverage": "The repository holds only the root README.md and LICENSE. It has no manifests, workspace or build configuration, source, or component boundaries, so it contains no Project under `guidance/project-readmes.md` and this scope is intentionally empty. The planned pnpm workspace (apps/web, packages/design, packages/ui, services/hemiciclo, deploy) does not exist yet and is not proposed.",
+          "candidates": [],
+          "unresolved": []
+        }
+      ]
+    },
+    "absence": [
+      {
+        "kind": "absence",
+        "path": "docs/README.md",
+        "identity": "sha256:6740fbeb577b8cebcdd39e3e5eecae3ee57acb0a18e7e3e34fe901febad15901"
+      },
+      {
+        "kind": "absence",
+        "path": "docs/development/README.md",
+        "identity": "sha256:af17e6ccccfc3d404358dfd85c9afc4a45dc6454e1331e35549d61ed355ef169"
+      }
+    ],
+    "named": {
+      "targets": {
+        "docs/README.md": {
+          "type": "missing"
+        },
+        "docs/development/README.md": {
+          "type": "missing"
+        }
+      },
+      "boundaries": {
+        "docs": {
+          "type": "missing"
+        }
+      }
+    },
+    "declarations": [
+      {
+        "id": "documentation",
+        "source": "discovery/documentation.md",
+        "sha256": "2ff022d0fd5f601a3c381ccdcb79c221f6d46d48a6816c8ed9d9d4f0805e3e51",
+        "executable": false
+      },
+      {
+        "id": "github-repository-configuration",
+        "source": "discovery/github-repository-configuration.md",
+        "sha256": "eeb0d64643e01015f505df3b76b826105c6744400a76d307527a230997bff392",
+        "executable": false
+      },
+      {
+        "id": "project-readmes",
+        "source": "discovery/project-readmes.md",
+        "sha256": "f5dac3063de1a68ae17dc93578ee9481ae746acfc4d4b16f84811de5af8ab858",
+        "executable": false
+      }
+    ],
+    "observation": {
+      "files": {
+        "LICENSE": {
+          "type": "file",
+          "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+          "executable": false
+        },
+        "README.md": {
+          "type": "file",
+          "sha256": "c58d03cf9d651308d44269fdcf417c8e8a4512747c7af053f21aede89f1d8fa1",
+          "executable": false
+        }
+      },
+      "inventories": {
+        ".": [
+          "LICENSE",
+          "README.md"
+        ]
+      },
+      "boundaries": {},
+      "targets": {},
+      "settings": {
+        "core.ignorecase": null,
+        "core.precomposeunicode": null,
+        "core.filemode": "true",
+        "core.symlinks": null,
+        "core.sparsecheckout": null,
+        "core.sparsecheckoutcone": null
+      },
+      "ignores": {
+        "global": {
+          "type": "missing"
+        },
+        "info": {
+          "type": "file",
+          "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+          "executable": false
+        },
+        ".gitignore": {
+          "type": "missing"
+        }
+      },
+      "limits": {
+        "paths": 20000,
+        "fileBytes": 8388608,
+        "totalBytes": 67108864,
+        "depth": 128
+      }
+    }
+  },
+  "scopeChanges": [
+    {
+      "id": "documentation",
+      "additions": [
+        "docs/README.md",
+        "docs/development/README.md"
+      ],
+      "removals": []
+    }
+  ]
+}
