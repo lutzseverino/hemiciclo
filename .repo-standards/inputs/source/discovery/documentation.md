@@ -3,11 +3,11 @@
 Draft the documentation scope with the drafter this source ships. With
 Node.js 24, run it from either supported location. From the root of a clone of
 the standards source checked out at the selected commit, pass the adopting
-repository's path:
+repository's path and the selected profile, `standard` or `factory`:
 
 ```sh
 node discovery/draft-documentation-scope.mjs --project /path/to/adopting-repository \
-  > /tmp/documentation-scope.json
+  --profile standard > /tmp/documentation-scope.json
 ```
 
 Or run the retained copy under `.repo-standards/inputs/source/` from the
@@ -32,10 +32,11 @@ repository root's glossary and context map, and each context glossary that
 context map lists. Paths other declarations own, and paths Repository Standards
 reserves, stay out, and so does every `README.md` outside the roots, which the
 documentation check would read as a root's index; such a README cannot enter
-this scope, even as a move source.
+this scope, even as a move source. If it is a Project README, the
+`project-readmes` declaration's proposal covers it.
 
-Decide only the cases in its unresolved questions, and remove each question once
-it is decided:
+Decide only the cases in its unresolved questions, resolving genuine membership
+questions with the maintainer, and remove each question once it is decided:
 
 - Whether a directory is a documentation root. For each one that is, draft
   again with `--root <directory>`. `docs` is always a root, and a documentation
@@ -44,7 +45,7 @@ it is decided:
   the scope must cover, such as a document to move into a category.
 - Which category a file or directory directly under a root moves to, and which
   category holds the documents of a root that has none.
-- Whether another `CONTEXT.md` or `CONTEXT-MAP.md` is a glossary or context map
+- Whether another `GLOSSARY.md` or `GLOSSARY-MAP.md` is a glossary or context map
   of this repository.
 - What becomes of a file under a root that Git ignores, a directory under a root
   without a file that Git keeps, a symbolic link under a root, or an entry that
@@ -60,5 +61,7 @@ documentation needs repair. Keep all declarations' paths disjoint: a Project
 README under a documentation root belongs to one declaration only. A move
 requires authority for its source, destination, and affected link repairs.
 
-The draft does not confirm membership: the maintainer confirms the
-documentation scope with the complete inspection.
+The draft does not decide membership by itself. The maintainer's request to
+adopt or update is consent to the drafted and reviewed scope. Ask them to
+confirm only when the complete inspection reports `confirmation.required` as
+`true`; pass `--confirmed` to `start` only in that case.

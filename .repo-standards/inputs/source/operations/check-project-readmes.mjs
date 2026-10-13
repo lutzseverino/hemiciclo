@@ -3,10 +3,11 @@ import { isAbsolute, posix, sep } from "node:path";
 import { interpretMarkdown } from "./lib/rendered-markdown.mjs";
 import {
   brokenLocalLinks,
+  localLinks,
   localPathExists,
 } from "./lib/local-markdown-links.mjs";
 
-const resultFormat = "repo-standards/result/v1";
+const resultFormat = "repo-standards/result/v2";
 
 function failProcess(message) {
   throw new Error(message);
@@ -19,9 +20,9 @@ function readRequest() {
   } catch {
     failProcess("Operation input must be one JSON object.");
   }
-  if (request?.format !== "repo-standards/operation/v1") {
+  if (request?.format !== "repo-standards/operation/v2") {
     failProcess(
-      "Unsupported operation input format; expected repo-standards/operation/v1.",
+      "Unsupported operation input format; expected repo-standards/operation/v2.",
     );
   }
   if (request.operation?.phase !== "checks") {
@@ -102,6 +103,24 @@ function validate(projectRoot, paths) {
     )) {
       corrections.push(`${path} links to missing ${link.target}.`);
     }
+    const sharedLinks = localLinks(
+      projectRoot,
+      path,
+      document.content.elements.filter(
+        (element) =>
+          element.type === "link" && (element.text || element.containsMedia),
+      ),
+    );
+    for (const sharedPath of [
+      "CONTRIBUTING.md",
+      "docs/development/README.md",
+    ]) {
+      if (
+        !sharedLinks.some((link) => link.path === sharedPath && !link.broken)
+      ) {
+        corrections.push(`Link ${path} to the root ${sharedPath}.`);
+      }
+    }
   }
   return [...new Set(corrections)];
 }
@@ -115,7 +134,7 @@ try {
   result(
     corrections.length === 0 ? "passed" : "failed",
     corrections.length === 0
-      ? `Project README structure is valid for ${request.allowedTargets.paths.length} concrete target${request.allowedTargets.paths.length === 1 ? "" : "s"}; purpose, commands, configuration, and documentation still require maintainer or agent review.`
+      ? `Project README structure and shared setup and contribution links are valid for ${request.allowedTargets.paths.length} concrete target${request.allowedTargets.paths.length === 1 ? "" : "s"}; Project membership, purpose, commands, configuration, documentation, and duplication of shared instructions still require maintainer or agent review.`
       : `Project README structure needs correction: ${corrections.join(" ")}`,
   );
 } catch (error) {
