@@ -1,5 +1,5 @@
 {
-  "description": "The complete Repo Canon standards profile",
+  "description": "The standard profile plus the factory's repository files, for a repository a factory serves",
   "declarations": [
     {
       "id": "agent-configuration-index",
@@ -45,6 +45,7 @@
               "operations/lib/rendered-markdown.mjs",
               "operations/lib/local-markdown-links.mjs",
               "operations/lib/documentation-model.mjs",
+              "operations/lib/entry-document.mjs",
               "discovery/draft-documentation-scope.mjs",
               "vendor/marked",
               "vendor/parse5"
@@ -80,6 +81,30 @@
       "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/domain.md"
     },
     {
+      "id": "factory-configuration",
+      "checks": [],
+      "fixes": [],
+      "kind": "file",
+      "target": ".factory/config.json",
+      "exact": ".factory/config.json"
+    },
+    {
+      "id": "factory-sandbox-image",
+      "checks": [],
+      "fixes": [],
+      "kind": "file",
+      "target": ".factory/Dockerfile",
+      "guidance": "guidance/factory-sandbox-image.md"
+    },
+    {
+      "id": "factory-sandbox-image-workflow",
+      "checks": [],
+      "fixes": [],
+      "kind": "file",
+      "target": ".github/workflows/sandbox-image.yml",
+      "exact": ".github/workflows/sandbox-image.yml"
+    },
+    {
       "id": "feature-request-template",
       "checks": [],
       "fixes": [],
@@ -89,7 +114,26 @@
     },
     {
       "id": "github-repository-configuration",
-      "checks": [],
+      "checks": [
+        {
+          "id": "pull-request-reviewer",
+          "run": {
+            "executable": "node",
+            "script": "operations/check-pull-request-reviewer.mjs",
+            "resources": [
+              ".agents/skills/babysit/reviewer.mjs"
+            ],
+            "arguments": []
+          },
+          "prerequisite": {
+            "version-arguments": [
+              "--version"
+            ],
+            "version": ">=24.0.0 <25.0.0"
+          },
+          "timeout-seconds": 30
+        }
+      ],
       "fixes": [
         {
           "id": "canonical-labels",
@@ -100,7 +144,11 @@
               "operations/lib/github-operation.mjs",
               "LICENSE",
               "THIRD_PARTY_NOTICES.md",
-              "vendor/mattpocock-skills/LICENSE"
+              "vendor/mattpocock-skills/LICENSE",
+              "vendor/humanlayer-skills/LICENSE",
+              "vendor/marked/LICENSE",
+              "vendor/parse5/LICENSE.parse5",
+              "vendor/parse5/LICENSE.entities"
             ],
             "arguments": []
           },
@@ -137,6 +185,14 @@
         "paths": [],
         "directories": []
       }
+    },
+    {
+      "id": "humanlayer-skills-license",
+      "checks": [],
+      "fixes": [],
+      "kind": "file",
+      "target": ".agents/skills/LICENSE.humanlayer-skills",
+      "exact": "vendor/humanlayer-skills/LICENSE"
     },
     {
       "id": "implementation-ticket-template",
@@ -300,6 +356,14 @@
       "exact": "operations/lib/rendered-markdown.mjs"
     },
     {
+      "id": "repository-license",
+      "checks": [],
+      "fixes": [],
+      "kind": "file",
+      "target": "LICENSE",
+      "guidance": "guidance/repository-license.md"
+    },
+    {
       "id": "repository-readme",
       "checks": [
         {
@@ -308,6 +372,7 @@
             "executable": "node",
             "script": "operations/check-repository-readme.mjs",
             "resources": [
+              "operations/lib/entry-document.mjs",
               "operations/lib/rendered-markdown.mjs",
               "operations/lib/local-markdown-links.mjs",
               "vendor/marked",
@@ -330,12 +395,12 @@
       "guidance": "guidance/repository-readme.md"
     },
     {
-      "id": "skill-ask-matt",
+      "id": "skill-babysit",
       "checks": [],
       "fixes": [],
       "kind": "skill",
-      "name": "ask-matt",
-      "source": "vendor/mattpocock-skills/skills/engineering/ask-matt"
+      "name": "babysit",
+      "source": ".agents/skills/babysit"
     },
     {
       "id": "skill-code-review",
@@ -354,14 +419,6 @@
       "source": "vendor/mattpocock-skills/skills/engineering/codebase-design"
     },
     {
-      "id": "skill-deliver",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "deliver",
-      "source": ".agents/skills/deliver"
-    },
-    {
       "id": "skill-diagnosing-bugs",
       "checks": [],
       "fixes": [],
@@ -376,14 +433,6 @@
       "kind": "skill",
       "name": "domain-modeling",
       "source": "vendor/mattpocock-skills/skills/engineering/domain-modeling"
-    },
-    {
-      "id": "skill-grill-me",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "grill-me",
-      "source": "vendor/mattpocock-skills/skills/productivity/grill-me"
     },
     {
       "id": "skill-grill-with-docs",
@@ -402,14 +451,6 @@
       "source": "vendor/mattpocock-skills/skills/productivity/grilling"
     },
     {
-      "id": "skill-handoff",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "handoff",
-      "source": "vendor/mattpocock-skills/skills/productivity/handoff"
-    },
-    {
       "id": "skill-implement",
       "checks": [],
       "fixes": [],
@@ -424,6 +465,14 @@
       "kind": "skill",
       "name": "improve-codebase-architecture",
       "source": "vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture"
+    },
+    {
+      "id": "skill-pr",
+      "checks": [],
+      "fixes": [],
+      "kind": "skill",
+      "name": "pr",
+      "source": "vendor/mattpocock-skills/skills/engineering/pr"
     },
     {
       "id": "skill-prototype",
@@ -442,44 +491,12 @@
       "source": "vendor/mattpocock-skills/skills/engineering/research"
     },
     {
-      "id": "skill-resolving-merge-conflicts",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "resolving-merge-conflicts",
-      "source": "vendor/mattpocock-skills/skills/engineering/resolving-merge-conflicts"
-    },
-    {
-      "id": "skill-setup-matt-pocock-skills",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "setup-matt-pocock-skills",
-      "source": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills"
-    },
-    {
       "id": "skill-tdd",
       "checks": [],
       "fixes": [],
       "kind": "skill",
       "name": "tdd",
       "source": "vendor/mattpocock-skills/skills/engineering/tdd"
-    },
-    {
-      "id": "skill-teach",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "teach",
-      "source": "vendor/mattpocock-skills/skills/productivity/teach"
-    },
-    {
-      "id": "skill-to-questionnaire",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "to-questionnaire",
-      "source": "vendor/mattpocock-skills/skills/productivity/to-questionnaire"
     },
     {
       "id": "skill-to-spec",
@@ -506,28 +523,12 @@
       "source": "vendor/mattpocock-skills/skills/engineering/triage"
     },
     {
-      "id": "skill-wait-what",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "wait-what",
-      "source": "vendor/mattpocock-skills/skills/productivity/wait-what"
-    },
-    {
       "id": "skill-wayfinder",
       "checks": [],
       "fixes": [],
       "kind": "skill",
       "name": "wayfinder",
       "source": "vendor/mattpocock-skills/skills/engineering/wayfinder"
-    },
-    {
-      "id": "skill-wizard",
-      "checks": [],
-      "fixes": [],
-      "kind": "skill",
-      "name": "wizard",
-      "source": "vendor/mattpocock-skills/skills/engineering/wizard"
     },
     {
       "id": "skill-writing-for-agents",

@@ -15,8 +15,8 @@
         "id": "canonical-labels"
       },
       "operationIndex": 0,
-      "before": "sha256:0fab65537c42d6fd27a87a757e516e1b8a9a6ee0817e22fcc36a064b9b9b58c3",
-      "after": "sha256:0fab65537c42d6fd27a87a757e516e1b8a9a6ee0817e22fcc36a064b9b9b58c3",
+      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
+      "after": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -35,8 +35,8 @@
         "id": "pull-request-integration"
       },
       "operationIndex": 1,
-      "before": "sha256:0fab65537c42d6fd27a87a757e516e1b8a9a6ee0817e22fcc36a064b9b9b58c3",
-      "after": "sha256:0fab65537c42d6fd27a87a757e516e1b8a9a6ee0817e22fcc36a064b9b9b58c3",
+      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
+      "after": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -51,12 +51,24 @@
           ],
           "directories": []
         },
+        "factory-sandbox-image": {
+          "paths": [
+            ".factory/Dockerfile"
+          ],
+          "directories": []
+        },
         "github-repository-configuration": {
           "paths": [],
           "directories": []
         },
         "project-readmes": {
           "paths": [],
+          "directories": []
+        },
+        "repository-license": {
+          "paths": [
+            "LICENSE"
+          ],
           "directories": []
         },
         "repository-readme": {
@@ -66,53 +78,45 @@
           "directories": []
         }
       },
-      "before": "sha256:0fab65537c42d6fd27a87a757e516e1b8a9a6ee0817e22fcc36a064b9b9b58c3",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {
-        "README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "c58d03cf9d651308d44269fdcf417c8e8a4512747c7af053f21aede89f1d8fa1",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "4408c1d3708175817140a68296121f593481966182e3f104bee53a9fecd3a02a",
-            "executable": false
-          }
-        },
-        "docs/README.md": {
+        ".factory/Dockerfile": {
           "before": {
             "type": "missing"
           },
           "after": {
             "type": "file",
-            "sha256": "11938f3ee16277f92e0889be9f6be05a170d90cfb9cac6afce1c91626f5675d3",
+            "sha256": "9579f4d70f551c0684dad995726904eb6fc1d9ae05227188891e1e6127e5ef86",
+            "executable": false
+          }
+        },
+        "README.md": {
+          "before": {
+            "type": "file",
+            "sha256": "4408c1d3708175817140a68296121f593481966182e3f104bee53a9fecd3a02a",
+            "executable": false
+          },
+          "after": {
+            "type": "file",
+            "sha256": "e747d28a9b57d974c5c8021902802a8294d1c343da84a9e403bc06a8efe1b3ee",
             "executable": false
           }
         },
         "docs/development/README.md": {
           "before": {
-            "type": "missing"
+            "type": "file",
+            "sha256": "bc3c704eb917357dc4b135febb85ac26c97af264587e1206aff7400803734293",
+            "executable": false
           },
           "after": {
             "type": "file",
-            "sha256": "bc3c704eb917357dc4b135febb85ac26c97af264587e1206aff7400803734293",
+            "sha256": "28c8195c2e41f0e5fc7ec725302a5933f344d9e1441e73b8a573fc3d7b23fd2b",
             "executable": false
           }
         }
       },
-      "boundaryChanges": {
-        "docs/development": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        }
-      },
+      "boundaryChanges": {},
       "violations": []
     },
     {
@@ -125,12 +129,24 @@
           ],
           "directories": []
         },
+        "factory-sandbox-image": {
+          "paths": [
+            ".factory/Dockerfile"
+          ],
+          "directories": []
+        },
         "github-repository-configuration": {
           "paths": [],
           "directories": []
         },
         "project-readmes": {
           "paths": [],
+          "directories": []
+        },
+        "repository-license": {
+          "paths": [
+            "LICENSE"
+          ],
           "directories": []
         },
         "repository-readme": {
@@ -140,8 +156,8 @@
           "directories": []
         }
       },
-      "before": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -163,8 +179,28 @@
         "id": "documentation-navigation"
       },
       "operationIndex": 2,
-      "before": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "changes": {},
+      "boundaryChanges": {},
+      "violations": []
+    },
+    {
+      "phase": "checks",
+      "scope": {
+        "github-repository-configuration": {
+          "paths": [],
+          "directories": []
+        }
+      },
+      "operation": {
+        "phase": "checks",
+        "declaration": "github-repository-configuration",
+        "id": "pull-request-reviewer"
+      },
+      "operationIndex": 3,
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -182,9 +218,9 @@
         "declaration": "project-readmes",
         "id": "project-readme-structure"
       },
-      "operationIndex": 3,
-      "before": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "operationIndex": 4,
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -204,9 +240,9 @@
         "declaration": "repository-readme",
         "id": "repository-readme-structure"
       },
-      "operationIndex": 4,
-      "before": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "operationIndex": 5,
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -221,12 +257,24 @@
           ],
           "directories": []
         },
+        "factory-sandbox-image": {
+          "paths": [
+            ".factory/Dockerfile"
+          ],
+          "directories": []
+        },
         "github-repository-configuration": {
           "paths": [],
           "directories": []
         },
         "project-readmes": {
           "paths": [],
+          "directories": []
+        },
+        "repository-license": {
+          "paths": [
+            "LICENSE"
+          ],
           "directories": []
         },
         "repository-readme": {
@@ -236,8 +284,8 @@
           "directories": []
         }
       },
-      "before": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
-      "after": "sha256:c444221cf50dcf114ce03047fec6b663866e52db2f4af22f4ced30b7b9bcfdaf",
+      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -257,7 +305,7 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "unchanged",
         "message": "GitHub labels already match the canonical configuration for lutzseverino/hemiciclo."
       },
@@ -278,9 +326,9 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
-        "status": "changed",
-        "message": "GitHub PR integration setup changed lutzseverino/hemiciclo: updated required-check ruleset. Final readback confirmed PR metadata, squash-only integration, PR-title subjects, and PR-body messages; unrelated settings and rules were preserved."
+        "format": "repo-standards/result/v2",
+        "status": "unchanged",
+        "message": "GitHub PR integration already matches the canonical configuration for lutzseverino/hemiciclo."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/1.stdout",
@@ -299,13 +347,34 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
         "message": "Documentation navigation is valid; content placement and usefulness still require maintainer or agent review."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/2.stdout",
       "stderr": ".repo-standards/local/operations/2.stderr"
+    },
+    {
+      "operation": {
+        "declaration": "github-repository-configuration",
+        "phase": "checks",
+        "id": "pull-request-reviewer"
+      },
+      "process": {
+        "exitCode": 0,
+        "signal": null,
+        "error": null,
+        "timedOut": false
+      },
+      "result": {
+        "format": "repo-standards/result/v2",
+        "status": "passed",
+        "message": "No pull request reviewer is configured."
+      },
+      "error": null,
+      "stdout": ".repo-standards/local/operations/3.stdout",
+      "stderr": ".repo-standards/local/operations/3.stderr"
     },
     {
       "operation": {
@@ -320,13 +389,13 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
-        "message": "Project README structure is valid for 0 concrete targets; purpose, commands, configuration, and documentation still require maintainer or agent review."
+        "message": "Project README structure and shared setup and contribution links are valid for 0 concrete targets; Project membership, purpose, commands, configuration, documentation, and duplication of shared instructions still require maintainer or agent review."
       },
       "error": null,
-      "stdout": ".repo-standards/local/operations/3.stdout",
-      "stderr": ".repo-standards/local/operations/3.stderr"
+      "stdout": ".repo-standards/local/operations/4.stdout",
+      "stderr": ".repo-standards/local/operations/4.stderr"
     },
     {
       "operation": {
@@ -341,31 +410,25 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
         "message": "Repository README structure is valid; factual content still requires maintainer or agent review."
       },
       "error": null,
-      "stdout": ".repo-standards/local/operations/4.stdout",
-      "stderr": ".repo-standards/local/operations/4.stderr"
+      "stdout": ".repo-standards/local/operations/5.stdout",
+      "stderr": ".repo-standards/local/operations/5.stderr"
     }
   ],
   "retryHistory": [],
   "changeSet": [
     {
-      "path": ".agents/skills/LICENSE.mattpocock-skills",
+      "path": ".agents/skills/LICENSE.humanlayer-skills",
       "phases": [
         "installation"
       ]
     },
     {
       "path": ".agents/skills/adopt-standards/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/agents/openai.yaml",
       "phases": [
         "installation"
       ]
@@ -413,37 +476,31 @@
       ]
     },
     {
-      "path": ".agents/skills/code-review/SKILL.md",
+      "path": ".agents/skills/babysit/SKILL.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/code-review/agents/openai.yaml",
+      "path": ".agents/skills/babysit/merge.mjs",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/codebase-design/DEEPENING.md",
+      "path": ".agents/skills/babysit/reviewer.mjs",
+      "phases": [
+        "installation"
+      ]
+    },
+    {
+      "path": ".agents/skills/babysit/wait.mjs",
       "phases": [
         "installation"
       ]
     },
     {
       "path": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/agents/openai.yaml",
       "phases": [
         "installation"
       ]
@@ -467,37 +524,19 @@
       ]
     },
     {
-      "path": ".agents/skills/diagnosing-bugs/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/ADR-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/domain-modeling/CONTEXT-FORMAT.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/domain-modeling/SKILL.md",
+      "path": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/domain-modeling/agents/openai.yaml",
+      "path": ".agents/skills/domain-modeling/SKILL.md",
       "phases": [
         "installation"
       ]
@@ -515,30 +554,6 @@
       ]
     },
     {
-      "path": ".agents/skills/grill-with-docs/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grill-with-docs/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grilling/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grilling/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/handoff/SKILL.md",
       "phases": [
         "installation"
@@ -551,67 +566,25 @@
       ]
     },
     {
-      "path": ".agents/skills/implement/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/implement/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/improve-codebase-architecture/HTML-REPORT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/improve-codebase-architecture/SKILL.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/improve-codebase-architecture/agents/openai.yaml",
+      "path": ".agents/skills/pr/CREDITS.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/prototype/LOGIC.md",
+      "path": ".agents/skills/pr/SKILL.md",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".agents/skills/prototype/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/UI.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/research/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/research/agents/openai.yaml",
+      "path": ".agents/skills/pr/agents/openai.yaml",
       "phases": [
         "installation"
       ]
@@ -677,31 +650,7 @@
       ]
     },
     {
-      "path": ".agents/skills/standards-updates/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/tdd/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/mocking.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/tests.md",
       "phases": [
         "installation"
       ]
@@ -755,49 +704,7 @@
       ]
     },
     {
-      "path": ".agents/skills/to-spec/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-spec/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-tickets/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-tickets/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/AGENT-BRIEF.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/OUT-OF-SCOPE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/triage/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/agents/openai.yaml",
       "phases": [
         "installation"
       ]
@@ -810,18 +717,6 @@
     },
     {
       "path": ".agents/skills/wait-what/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wayfinder/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wayfinder/agents/openai.yaml",
       "phases": [
         "installation"
       ]
@@ -845,43 +740,13 @@
       ]
     },
     {
-      "path": ".agents/skills/writing-for-agents/SKILL-MECHANICS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/writing-for-agents/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/writing-for-agents/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/adopt-standards",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".claude/skills/ask-matt",
       "phases": [
         "installation"
       ]
     },
     {
-      "path": ".claude/skills/code-review",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/codebase-design",
+      "path": ".claude/skills/babysit",
       "phases": [
         "installation"
       ]
@@ -893,31 +758,7 @@
       ]
     },
     {
-      "path": ".claude/skills/diagnosing-bugs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/domain-modeling",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".claude/skills/grill-me",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/grill-with-docs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/grilling",
       "phases": [
         "installation"
       ]
@@ -929,25 +770,7 @@
       ]
     },
     {
-      "path": ".claude/skills/implement",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/improve-codebase-architecture",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/prototype",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/research",
+      "path": ".claude/skills/pr",
       "phases": [
         "installation"
       ]
@@ -965,18 +788,6 @@
       ]
     },
     {
-      "path": ".claude/skills/standards-updates",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/tdd",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".claude/skills/teach",
       "phases": [
         "installation"
@@ -989,31 +800,7 @@
       ]
     },
     {
-      "path": ".claude/skills/to-spec",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/to-tickets",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/triage",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".claude/skills/wait-what",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/wayfinder",
       "phases": [
         "installation"
       ]
@@ -1025,31 +812,13 @@
       ]
     },
     {
-      "path": ".claude/skills/writing-for-agents",
+      "path": ".factory/Dockerfile",
       "phases": [
-        "installation"
+        "agent"
       ]
     },
     {
-      "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/feature-request.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/implementation-ticket.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/specification.yml",
+      "path": ".factory/config.json",
       "phases": [
         "installation"
       ]
@@ -1073,7 +842,7 @@
       ]
     },
     {
-      "path": ".github/workflows/pr-metadata.yml",
+      "path": ".github/workflows/sandbox-image.yml",
       "phases": [
         "installation"
       ]
@@ -1097,31 +866,7 @@
       ]
     },
     {
-      "path": "docs/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/agents/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": "docs/agents/domain.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/agents/issue-tracker.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/agents/triage-labels.md",
       "phases": [
         "installation"
       ]
@@ -1143,55 +888,13 @@
       "phases": [
         "installation"
       ]
-    },
-    {
-      "path": "vendor/marked/LICENSE",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/marked/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/marked/marked.esm.js",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/LICENSE.entities",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/LICENSE.parse5",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/parse5.esm.js",
-      "phases": [
-        "installation"
-      ]
     }
   ],
   "lastComplete": {
-    "run": "ccd45d16-3ec6-4439-a0f1-864412d8938b",
-    "inspection": "sha256:4446d01c627cc63baae1790fd4b03646c7458c5c8dfaad9a28a1cee500799d5f",
-    "completedAt": "2026-10-07T14:50:35.120Z",
-    "head": "ec1a658c3430c9f917e78aab42a1b0789bbb0721"
+    "run": "62ae883c-058a-436e-9e90-2dcc450a5326",
+    "inspection": "sha256:cbf3be401b4c26164a6d31b1cabeb370c91aff739cde5d4ec3a54bc61a0b54a7",
+    "completedAt": "2026-10-13T23:48:13.731Z",
+    "head": "1e88b63569fc97af45bde60a1a59705e56bc5229"
   },
   "baselines": {
     "docs/agents/README.md": {
@@ -1199,7 +902,7 @@
       "executable": false
     },
     "AGENTS.md": {
-      "sha256": "a618bde85fc4febaf526f393ebffc0129506cf4a52501e20fbb490e204cb8b7c",
+      "sha256": "b07aea42b68e26527216b901bd262e69347e6993d387ad04c6a234766e728937",
       "executable": false
     },
     ".github/ISSUE_TEMPLATE/bug-report.yml": {
@@ -1207,15 +910,27 @@
       "executable": false
     },
     "CONTRIBUTING.md": {
-      "sha256": "ec24834f03f1cd8fdb5c7fb0d62aa4d9824a0c55dc008b21477c141de0091d59",
+      "sha256": "88565885f90c94d74e06ce36de942532992297b80e1af0a97e26574829c6d529",
       "executable": false
     },
     "docs/agents/domain.md": {
-      "sha256": "edc6d6131fdffc4b7135704f5262124fc43355c95f61b7399dc5a4db643e28ca",
+      "sha256": "593a7042218689f1d24df89df14eaf0a20e19e0d0a7d479a01947ac78f0784b9",
+      "executable": false
+    },
+    ".factory/config.json": {
+      "sha256": "9de48af731c45f963a613a6b77668ce9727834ae5a2d9b92af1c5ffcb18a1c07",
+      "executable": false
+    },
+    ".github/workflows/sandbox-image.yml": {
+      "sha256": "71f03ceb1ed50d8d82563c0ef971926cb52bb241b1eb8041f9f7c26e6679722e",
       "executable": false
     },
     ".github/ISSUE_TEMPLATE/feature-request.yml": {
       "sha256": "d3df4f5c27dd7b7a22d0baec1a52a1dc3301c002549f8634392a3abd26566505",
+      "executable": false
+    },
+    ".agents/skills/LICENSE.humanlayer-skills": {
+      "sha256": "5f13c18ea00ea5c1384f41745feeca774079164f7f59a92e4ac0899ad217b26f",
       "executable": false
     },
     ".github/ISSUE_TEMPLATE/implementation-ticket.yml": {
@@ -1223,11 +938,11 @@
       "executable": false
     },
     "scripts/validate-issue-contract.mjs": {
-      "sha256": "557049976a4307e864467f20af5a453aef8aa8674df5415afb7f1b5405c41ff7",
+      "sha256": "f7e604f218f7aab8eaa53e537aa8bdd079f9208be4f8866b5333278d92d9ea3e",
       "executable": false
     },
     ".github/workflows/issue-contracts.yml": {
-      "sha256": "c6e020c97c69fe08db18e1a0fc15a3a3e25681955ace994117065427cf21f270",
+      "sha256": "440fa7d07a8bbf9f5efe5232b2f863d5767a3ff8616b340f078af1bb1a88439f",
       "executable": false
     },
     "docs/agents/issue-tracker.md": {
@@ -1267,7 +982,7 @@
       "executable": false
     },
     ".github/scripts/validate-pr-metadata.mjs": {
-      "sha256": "f158dd6cd917302fd655ac9644aaaf54505b6f6f44e54e9d89e3c3d6dff4ecfb",
+      "sha256": "967c93f5cb5057d50e1fd7b7315fd520ae10558e47f45ef5d286e79ab5fadcf0",
       "executable": false
     },
     ".github/workflows/pr-metadata.yml": {
@@ -1275,23 +990,27 @@
       "executable": false
     },
     ".github/PULL_REQUEST_TEMPLATE.md": {
-      "sha256": "3da5d642dd01ec874d4a855d608c21f42d082fcd8a05bf66b11e823ded57f1ae",
+      "sha256": "4ca0528fa7bab99c0107da587058aebf6cb94c2e9a5760b725f50a3e2c29d2ec",
       "executable": false
     },
     "operations/lib/rendered-markdown.mjs": {
-      "sha256": "c9e0db1806e9ecac66bb9f99c201a07306a5155d205294e80c5592acc175476b",
+      "sha256": "b885d1cd1650e61c616b6f2917b4074bc752282626b4d5eee01df4d5a923b267",
       "executable": false
     },
-    ".agents/skills/ask-matt/PHASE-BOUNDARIES.md": {
-      "sha256": "a8aa20158609ef39e2b308b6ba0660c91066838d07a867202e63a7744a88a3ed",
+    ".agents/skills/babysit/SKILL.md": {
+      "sha256": "14e03172858f7ba2d025d02b0e5ec483ee77390270aaa6224ec447dcd055275f",
       "executable": false
     },
-    ".agents/skills/ask-matt/SKILL.md": {
-      "sha256": "b25d86fb36b1d294eeead5d7db529f86135f9671f2afcd607579a63bb2213769",
+    ".agents/skills/babysit/merge.mjs": {
+      "sha256": "d4a4352b95376f44db1dba5e8e13368846458e91789035874b927b499938e302",
       "executable": false
     },
-    ".agents/skills/ask-matt/agents/openai.yaml": {
-      "sha256": "bdffbc5a0a99ed1b6ef3253d251d755fd18162b9845972e380007f844b09b05c",
+    ".agents/skills/babysit/reviewer.mjs": {
+      "sha256": "1802605d9778698b5d6d6599323648b9329df1b821e18760f13b02c237bf8482",
+      "executable": false
+    },
+    ".agents/skills/babysit/wait.mjs": {
+      "sha256": "fdedab285461067819b691168af2707e4afc7b44eb1ca9671a6bc840ca05e281",
       "executable": false
     },
     ".agents/skills/code-review/SKILL.md": {
@@ -1307,7 +1026,7 @@
       "executable": false
     },
     ".agents/skills/codebase-design/DESIGN-IT-TWICE.md": {
-      "sha256": "8e740bf98446dbd4dfdc132ac4346d9a7eedaf93de6a495889171cf7f99f16bd",
+      "sha256": "52b52e75655a27aea59c6966b410bac82448968ad46ef1ebb9f07c274e3ae010",
       "executable": false
     },
     ".agents/skills/codebase-design/SKILL.md": {
@@ -1318,16 +1037,8 @@
       "sha256": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
       "executable": false
     },
-    ".agents/skills/deliver/SKILL.md": {
-      "sha256": "e1138f5120adaa23036065ce730488de88f76e02f2f43a9ef2e31956dac44ff9",
-      "executable": false
-    },
-    ".agents/skills/deliver/agents/openai.yaml": {
-      "sha256": "de8c252bae82640677c7d2b11522dbdf650e17800414ce430ac89a3501a57b2c",
-      "executable": false
-    },
     ".agents/skills/diagnosing-bugs/SKILL.md": {
-      "sha256": "77f3cf31bc99b2f49af943222526531fcc9fc41d047626d3640e875e85af3e84",
+      "sha256": "9168404abda0967a5d32977e3498cd95fda6807018852f3de736a78357c82b40",
       "executable": false
     },
     ".agents/skills/diagnosing-bugs/agents/openai.yaml": {
@@ -1342,24 +1053,16 @@
       "sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
       "executable": false
     },
-    ".agents/skills/domain-modeling/CONTEXT-FORMAT.md": {
-      "sha256": "17ab16ce783e4d2801ee52fd9acdf550cbf44de65ae76797a93943bbedf22a13",
+    ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md": {
+      "sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
       "executable": false
     },
     ".agents/skills/domain-modeling/SKILL.md": {
-      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
       "executable": false
     },
     ".agents/skills/domain-modeling/agents/openai.yaml": {
       "sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
-      "executable": false
-    },
-    ".agents/skills/grill-me/SKILL.md": {
-      "sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
-      "executable": false
-    },
-    ".agents/skills/grill-me/agents/openai.yaml": {
-      "sha256": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b",
       "executable": false
     },
     ".agents/skills/grill-with-docs/SKILL.md": {
@@ -1378,14 +1081,6 @@
       "sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
       "executable": false
     },
-    ".agents/skills/handoff/SKILL.md": {
-      "sha256": "7c62de979fdc7ac32fb5ddb2146156c917f80ee070d30fadc9d40343c4b6ed25",
-      "executable": false
-    },
-    ".agents/skills/handoff/agents/openai.yaml": {
-      "sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
-      "executable": false
-    },
     ".agents/skills/implement/SKILL.md": {
       "sha256": "6d3fd9e83b8f36e5213854779db49b256a457a7ebb4a503e53fa7dcff696adc3",
       "executable": false
@@ -1399,11 +1094,23 @@
       "executable": false
     },
     ".agents/skills/improve-codebase-architecture/SKILL.md": {
-      "sha256": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+      "sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392",
       "executable": false
     },
     ".agents/skills/improve-codebase-architecture/agents/openai.yaml": {
       "sha256": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
+      "executable": false
+    },
+    ".agents/skills/pr/CREDITS.md": {
+      "sha256": "a7a087127665d7298a72280ef6e19c41ad8404523712a788c8dc3ab414bc2497",
+      "executable": false
+    },
+    ".agents/skills/pr/SKILL.md": {
+      "sha256": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd",
+      "executable": false
+    },
+    ".agents/skills/pr/agents/openai.yaml": {
+      "sha256": "2295b586624db4ef546f3fd4695492f039d941a46d8a1593a702ce3ca511b8ad",
       "executable": false
     },
     ".agents/skills/prototype/LOGIC.md": {
@@ -1430,44 +1137,8 @@
       "sha256": "9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d",
       "executable": false
     },
-    ".agents/skills/resolving-merge-conflicts/SKILL.md": {
-      "sha256": "9d8114f8ef0b31f535a265fc05c364bd8cf2e2895a830040e06c22acb11f54b0",
-      "executable": false
-    },
-    ".agents/skills/resolving-merge-conflicts/agents/openai.yaml": {
-      "sha256": "a1f4f96838f2ed6282eb28abbbf99029cb8fadce552baf53da90a025b8bffddf",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/SKILL.md": {
-      "sha256": "2bcd89e97777cdb705914424e39c97d5db524c8eb4eafac8120778a07774f0ec",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/agents/openai.yaml": {
-      "sha256": "9527de0110541c45712319025155aeab8dc7d77c6ed6e5e83271bab1851ab939",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/domain.md": {
-      "sha256": "edc6d6131fdffc4b7135704f5262124fc43355c95f61b7399dc5a4db643e28ca",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/issue-tracker-github.md": {
-      "sha256": "afd6852a80185217bd28aa5cbe456bef1e85be25be7bd1fba382d5b8ee428325",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md": {
-      "sha256": "ea175f73d193b3f55819c0ed9bbccf6ee0e70ad8f928e3d7607596c53380acd6",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/issue-tracker-local.md": {
-      "sha256": "7dcda20a2eb4bdc89b95d1143423c0691309921cadae3132e6424f371030506e",
-      "executable": false
-    },
-    ".agents/skills/setup-matt-pocock-skills/triage-labels.md": {
-      "sha256": "4f53c9b40ce2651e3611aa090eaedbd6dbc9b71ef8c5f7e65eac0d8263190d0d",
-      "executable": false
-    },
     ".agents/skills/tdd/SKILL.md": {
-      "sha256": "cb01f66bebfaa25fa1f88e6b7e769cd9fd9f35b1120b8563749820738814c927",
+      "sha256": "93ea419b76e9caaf26153b828e984f7c3fb136f4caa67b14af95f32ea965a1cc",
       "executable": false
     },
     ".agents/skills/tdd/agents/openai.yaml": {
@@ -1480,38 +1151,6 @@
     },
     ".agents/skills/tdd/tests.md": {
       "sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
-      "executable": false
-    },
-    ".agents/skills/teach/GLOSSARY-FORMAT.md": {
-      "sha256": "9b99859ec28437668130d8f2ce5a342938970f8a1ed4fd38c3eab4f4b5fff210",
-      "executable": false
-    },
-    ".agents/skills/teach/LEARNING-RECORD-FORMAT.md": {
-      "sha256": "701fa34b6748aa89e6c960ffb815257f481a7d77fb2900f9028f7edf3fdd6052",
-      "executable": false
-    },
-    ".agents/skills/teach/MISSION-FORMAT.md": {
-      "sha256": "8cacbb3c0644d3ae0ea4965564797099401a6930a23f7cf462918576587f2418",
-      "executable": false
-    },
-    ".agents/skills/teach/RESOURCES-FORMAT.md": {
-      "sha256": "e9cacf34026e11a8d1c8f9de88abe5bcbf654f4ebdb25cae8c0de0d5f48f44ec",
-      "executable": false
-    },
-    ".agents/skills/teach/SKILL.md": {
-      "sha256": "a32df9dcdfc0c4fdc1c98e1ed3940c5f56b84c1aa90ff60346f32b8b53915b43",
-      "executable": false
-    },
-    ".agents/skills/teach/agents/openai.yaml": {
-      "sha256": "5856f3ae8aec742f1499c640aecdd5f1d6af5fa210a7c6ec794de8263a6f733f",
-      "executable": false
-    },
-    ".agents/skills/to-questionnaire/SKILL.md": {
-      "sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b",
-      "executable": false
-    },
-    ".agents/skills/to-questionnaire/agents/openai.yaml": {
-      "sha256": "9e8a06c38c8842eea8d4922cb9d1ead8e3ace647bab259b943c994a1b4742bc2",
       "executable": false
     },
     ".agents/skills/to-spec/SKILL.md": {
@@ -1539,19 +1178,11 @@
       "executable": false
     },
     ".agents/skills/triage/SKILL.md": {
-      "sha256": "623a2ed692bdc77d2090e2a3dea3b627dd722ad3bbaca0be83aada75292c8fc4",
+      "sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
       "executable": false
     },
     ".agents/skills/triage/agents/openai.yaml": {
       "sha256": "2e683717720cf456d165d0bb1a68bb600d0b6a8ccb61841c172e50d26f95351c",
-      "executable": false
-    },
-    ".agents/skills/wait-what/SKILL.md": {
-      "sha256": "e3f44e3ccbc0e7b62f20ba70b295fc9c9f4aa3f96c77168faee1c71bacbf4215",
-      "executable": false
-    },
-    ".agents/skills/wait-what/agents/openai.yaml": {
-      "sha256": "b41faadf741d51e4ea184148b2d1854d93f947aaf754c7844f70a00f04194999",
       "executable": false
     },
     ".agents/skills/wayfinder/SKILL.md": {
@@ -1560,18 +1191,6 @@
     },
     ".agents/skills/wayfinder/agents/openai.yaml": {
       "sha256": "88bc81a11a6d52ac67aeaa76b8b619e387020d47c5133a4dd4927fd15c4ad073",
-      "executable": false
-    },
-    ".agents/skills/wizard/SKILL.md": {
-      "sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
-      "executable": false
-    },
-    ".agents/skills/wizard/agents/openai.yaml": {
-      "sha256": "98f44d682d58e262f160dc59a8befc365e0aa65820dd0261864af26aa8e59d83",
-      "executable": false
-    },
-    ".agents/skills/wizard/template.sh": {
-      "sha256": "33cbe9dfb1d0e9185b60248a52aabed14bc64785a00cac695e302e739dd6c153",
       "executable": false
     },
     ".agents/skills/writing-for-agents/SKILL-MECHANICS.md": {
@@ -1595,7 +1214,7 @@
       "executable": false
     },
     ".agents/skills/adopt-standards/SKILL.md": {
-      "sha256": "ef097e2e369ed5bc44311a75292891de0260ff3dd318942f36ee49cb668df08e",
+      "sha256": "8abd386956435fec093e74982de0687bd5d9b4be6e77ef28bc3a670f1c415224",
       "executable": false
     },
     ".agents/skills/adopt-standards/agents/openai.yaml": {
@@ -1603,23 +1222,23 @@
       "executable": false
     },
     ".agents/skills/adopt-standards/references/assessment.md": {
-      "sha256": "517e66c6556d19e0e29f19f229c5a10c202cb4a0dd9d3d70ad7275fba165f7fe",
+      "sha256": "b0e4fdafd427a18ba834deaa98e4a695884d5e9cd0f959df7f5fbd469e07d881",
       "executable": false
     },
     ".agents/skills/adopt-standards/references/discovery.md": {
-      "sha256": "30acedb91d827e23d1442252a2c8e42ffd3b5b22dc5cdbf969cf09e66a026494",
+      "sha256": "0170d35348f3b671a1c28da5ca624e32bc71bae32198f16bd42d3b419fb9c980",
       "executable": false
     },
     ".agents/skills/adopt-standards/references/recovery.md": {
-      "sha256": "69c25d7f4bde8cedd20350be878f1444f5ee7095d746c46a39ddacb848dad621",
+      "sha256": "27d88ef16bccb4538b25c40068b57eb9eeb769320fb1a87b78a33057e7924e06",
       "executable": false
     },
     ".agents/skills/adopt-standards/references/review.md": {
-      "sha256": "cf8f028b0965d0395571e79a5ca5bb795de1b2ff397a45aab411474da72df10a",
+      "sha256": "9a369755463ded9523d50bf1a338490d156860c7b3516ca27b465427d113bf61",
       "executable": false
     },
     ".agents/skills/standards-updates/SKILL.md": {
-      "sha256": "722c218bf5a3cf54ea5778bac1c7c7c56fa27f912b8648e7de2b798699f1ee18",
+      "sha256": "3262164c280f6d05c33fcfed23934dc17955038680ad19a89fef26a5cb4e0999",
       "executable": false
     },
     ".agents/skills/standards-updates/agents/openai.yaml": {
@@ -1628,10 +1247,11 @@
     }
   },
   "skills": {
-    ".agents/skills/ask-matt": [
-      "PHASE-BOUNDARIES.md",
+    ".agents/skills/babysit": [
       "SKILL.md",
-      "agents/openai.yaml"
+      "merge.mjs",
+      "reviewer.mjs",
+      "wait.mjs"
     ],
     ".agents/skills/code-review": [
       "SKILL.md",
@@ -1643,10 +1263,6 @@
       "SKILL.md",
       "agents/openai.yaml"
     ],
-    ".agents/skills/deliver": [
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
     ".agents/skills/diagnosing-bugs": [
       "SKILL.md",
       "agents/openai.yaml",
@@ -1654,11 +1270,7 @@
     ],
     ".agents/skills/domain-modeling": [
       "ADR-FORMAT.md",
-      "CONTEXT-FORMAT.md",
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
-    ".agents/skills/grill-me": [
+      "GLOSSARY-FORMAT.md",
       "SKILL.md",
       "agents/openai.yaml"
     ],
@@ -1670,16 +1282,17 @@
       "SKILL.md",
       "agents/openai.yaml"
     ],
-    ".agents/skills/handoff": [
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
     ".agents/skills/implement": [
       "SKILL.md",
       "agents/openai.yaml"
     ],
     ".agents/skills/improve-codebase-architecture": [
       "HTML-REPORT.md",
+      "SKILL.md",
+      "agents/openai.yaml"
+    ],
+    ".agents/skills/pr": [
+      "CREDITS.md",
       "SKILL.md",
       "agents/openai.yaml"
     ],
@@ -1693,36 +1306,11 @@
       "SKILL.md",
       "agents/openai.yaml"
     ],
-    ".agents/skills/resolving-merge-conflicts": [
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
-    ".agents/skills/setup-matt-pocock-skills": [
-      "SKILL.md",
-      "agents/openai.yaml",
-      "domain.md",
-      "issue-tracker-github.md",
-      "issue-tracker-gitlab.md",
-      "issue-tracker-local.md",
-      "triage-labels.md"
-    ],
     ".agents/skills/tdd": [
       "SKILL.md",
       "agents/openai.yaml",
       "mocking.md",
       "tests.md"
-    ],
-    ".agents/skills/teach": [
-      "GLOSSARY-FORMAT.md",
-      "LEARNING-RECORD-FORMAT.md",
-      "MISSION-FORMAT.md",
-      "RESOURCES-FORMAT.md",
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
-    ".agents/skills/to-questionnaire": [
-      "SKILL.md",
-      "agents/openai.yaml"
     ],
     ".agents/skills/to-spec": [
       "SKILL.md",
@@ -1738,18 +1326,9 @@
       "SKILL.md",
       "agents/openai.yaml"
     ],
-    ".agents/skills/wait-what": [
-      "SKILL.md",
-      "agents/openai.yaml"
-    ],
     ".agents/skills/wayfinder": [
       "SKILL.md",
       "agents/openai.yaml"
-    ],
-    ".agents/skills/wizard": [
-      "SKILL.md",
-      "agents/openai.yaml",
-      "template.sh"
     ],
     ".agents/skills/writing-for-agents": [
       "SKILL-MECHANICS.md",
@@ -1772,31 +1351,23 @@
   "links": {
     ".claude/skills/adopt-standards": "../../.agents/skills/adopt-standards",
     ".claude/skills/standards-updates": "../../.agents/skills/standards-updates",
-    ".claude/skills/ask-matt": "../../.agents/skills/ask-matt",
+    ".claude/skills/babysit": "../../.agents/skills/babysit",
     ".claude/skills/code-review": "../../.agents/skills/code-review",
     ".claude/skills/codebase-design": "../../.agents/skills/codebase-design",
-    ".claude/skills/deliver": "../../.agents/skills/deliver",
     ".claude/skills/diagnosing-bugs": "../../.agents/skills/diagnosing-bugs",
     ".claude/skills/domain-modeling": "../../.agents/skills/domain-modeling",
-    ".claude/skills/grill-me": "../../.agents/skills/grill-me",
     ".claude/skills/grill-with-docs": "../../.agents/skills/grill-with-docs",
     ".claude/skills/grilling": "../../.agents/skills/grilling",
-    ".claude/skills/handoff": "../../.agents/skills/handoff",
     ".claude/skills/implement": "../../.agents/skills/implement",
     ".claude/skills/improve-codebase-architecture": "../../.agents/skills/improve-codebase-architecture",
+    ".claude/skills/pr": "../../.agents/skills/pr",
     ".claude/skills/prototype": "../../.agents/skills/prototype",
     ".claude/skills/research": "../../.agents/skills/research",
-    ".claude/skills/resolving-merge-conflicts": "../../.agents/skills/resolving-merge-conflicts",
-    ".claude/skills/setup-matt-pocock-skills": "../../.agents/skills/setup-matt-pocock-skills",
     ".claude/skills/tdd": "../../.agents/skills/tdd",
-    ".claude/skills/teach": "../../.agents/skills/teach",
-    ".claude/skills/to-questionnaire": "../../.agents/skills/to-questionnaire",
     ".claude/skills/to-spec": "../../.agents/skills/to-spec",
     ".claude/skills/to-tickets": "../../.agents/skills/to-tickets",
     ".claude/skills/triage": "../../.agents/skills/triage",
-    ".claude/skills/wait-what": "../../.agents/skills/wait-what",
     ".claude/skills/wayfinder": "../../.agents/skills/wayfinder",
-    ".claude/skills/wizard": "../../.agents/skills/wizard",
     ".claude/skills/writing-for-agents": "../../.agents/skills/writing-for-agents"
   },
   "checks": [
@@ -1813,13 +1384,34 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
         "message": "Documentation navigation is valid; content placement and usefulness still require maintainer or agent review."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/2.stdout",
       "stderr": ".repo-standards/local/operations/2.stderr"
+    },
+    {
+      "operation": {
+        "declaration": "github-repository-configuration",
+        "phase": "checks",
+        "id": "pull-request-reviewer"
+      },
+      "process": {
+        "exitCode": 0,
+        "signal": null,
+        "error": null,
+        "timedOut": false
+      },
+      "result": {
+        "format": "repo-standards/result/v2",
+        "status": "passed",
+        "message": "No pull request reviewer is configured."
+      },
+      "error": null,
+      "stdout": ".repo-standards/local/operations/3.stdout",
+      "stderr": ".repo-standards/local/operations/3.stderr"
     },
     {
       "operation": {
@@ -1834,13 +1426,13 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
-        "message": "Project README structure is valid for 0 concrete targets; purpose, commands, configuration, and documentation still require maintainer or agent review."
+        "message": "Project README structure and shared setup and contribution links are valid for 0 concrete targets; Project membership, purpose, commands, configuration, documentation, and duplication of shared instructions still require maintainer or agent review."
       },
       "error": null,
-      "stdout": ".repo-standards/local/operations/3.stdout",
-      "stderr": ".repo-standards/local/operations/3.stderr"
+      "stdout": ".repo-standards/local/operations/4.stdout",
+      "stderr": ".repo-standards/local/operations/4.stderr"
     },
     {
       "operation": {
@@ -1855,86 +1447,102 @@
         "timedOut": false
       },
       "result": {
-        "format": "repo-standards/result/v1",
+        "format": "repo-standards/result/v2",
         "status": "passed",
         "message": "Repository README structure is valid; factual content still requires maintainer or agent review."
       },
       "error": null,
-      "stdout": ".repo-standards/local/operations/4.stdout",
-      "stderr": ".repo-standards/local/operations/4.stderr"
+      "stdout": ".repo-standards/local/operations/5.stdout",
+      "stderr": ".repo-standards/local/operations/5.stderr"
     }
   ],
   "assessments": [
     {
       "format": "repo-standards/assessment/v3",
       "scope": {
-        "inspection": "sha256:4446d01c627cc63baae1790fd4b03646c7458c5c8dfaad9a28a1cee500799d5f",
-        "afterFixes": "sha256:4e7f4cf11cd9c25c0ec108baaf5feedf5b7fa4dc1773c0a8ae9f1de8a15b6429"
+        "inspection": "sha256:cbf3be401b4c26164a6d31b1cabeb370c91aff739cde5d4ec3a54bc61a0b54a7",
+        "afterFixes": "sha256:01de0d57441be536aa1481f409d6b8a79f6b21f41bd4bdff2189845e4302d392"
       },
-      "run": "ccd45d16-3ec6-4439-a0f1-864412d8938b",
-      "selection": "sha256:30e7cac8bc11c79b1d5357fa30e09a0ce28f3bf14335220eb9158991a512bb44",
-      "snapshot": "sha256:c83204c0b3840516b6545053257b63beeb1eec36648a9364457e67db4e17faf9",
+      "run": "62ae883c-058a-436e-9e90-2dcc450a5326",
+      "selection": "sha256:57b8b83a7c7eac6f45ca5f5addf501f2c3f30a8a42dad5d487425d29173b8189",
+      "snapshot": "sha256:d0f51e8bc9378029bf5cd14f08d0b8ffaa3a3f366cee160d9873d88144eac9bc",
       "declarations": [
         {
           "id": "documentation",
           "status": "satisfied",
-          "explanation": "docs/README.md indexes the two categories that have content, development and agents, each with a description of what belongs there. docs/development/README.md states its purpose, then Setup and validation, which truthfully says the project has no application code yet and names the real prerequisites (Git, authenticated gh) and validation (git diff --check, the required PR metadata check, the Issue contracts workflow). The usage and adr categories are not created because they have no content yet.",
+          "explanation": "The documentation follows the installed contribution guide's documentation rules. `docs/README.md` indexes the two category directories with descriptions of what belongs in each. `docs/development/README.md` gives its purpose and then a Setup and validation section that now states the real prerequisites: Git, an authenticated `gh`, and Node.js 24 for the installed `babysit` skill's wait and merge scripts. It also names the `Sandbox image` workflow this update installs alongside the existing `PR metadata` check and `Issue contracts` workflow. No usage category or root usage index exists, so the newcomer rules for that index do not apply. No glossary exists on the default branch, so no CONTEXT.md rename applies.",
           "changedPaths": [
-            "docs/README.md",
             "docs/development/README.md"
           ],
           "evidence": [
-            "docs/README.md lists [Development](development/README.md) and [Agent configuration](agents/README.md) in the `[Title](path): description` form.",
-            "docs/development/README.md has the purpose sentence, a `## Setup and validation` section, and no documents to index yet.",
-            "The repository tracks only README.md and LICENSE beyond the adoption content; no manifests, source, or build configuration exist.",
-            ".github/workflows/pr-metadata.yml defines the job named `PR metadata` and .github/workflows/issue-contracts.yml runs on issue and issue_comment events, matching the development guide's description.",
-            "docs/agents/ keeps the installed exact files unchanged."
+            "docs/README.md lists Development and Agent configuration with one `[Title](path): description` item each; each directory has a README.",
+            "docs/development/README.md: purpose sentence, then `## Setup and validation`; the new sentence about Node.js 24 is grounded in `.agents/skills/babysit/SKILL.md` steps 1 and 5, which run `node <skill directory>/wait.mjs` and `merge.mjs`.",
+            "`.github/workflows/sandbox-image.yml` (installed by this run) builds `.factory/Dockerfile` on pull requests that change it, as the development guide now says.",
+            "The documentation scope drafter at v0.11.1 with --profile factory, rerun against the post-installation tree, reports the same two included files and no unresolved questions.",
+            "`git ls-files` shows no CONTEXT.md, CONTEXT-MAP.md, GLOSSARY.md or GLOSSARY-MAP.md, and no docs/usage directory."
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "After fixes the project held only README.md, LICENSE, and installed exact content, so the two included indexes are the complete documentation scope.",
+              "explanation": "After installation and the two unchanged fixes, `docs` is still the only documentation root; its only non-exact Markdown files are docs/README.md and docs/development/README.md, both confirmed. The retired skills' Markdown under `.agents` is gone, so the exclusion of `.agents` no longer covers any document.",
               "evidence": [
-                "The drafter at v0.5.5 proposed exactly docs/README.md and docs/development/README.md for this tree.",
-                "No other Markdown exists under docs besides the exact-owned docs/agents files."
+                "Reran discovery/draft-documentation-scope.mjs --profile factory against the post-fix tree: two includes, four exact-owned docs/agents excludes, no unresolved questions.",
+                "Both fixes reported `unchanged`, so they changed no project content."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "The current project adds only the two included indexes and the README edit, so coverage is unchanged.",
+              "explanation": "The refreshed project changed only docs/development/README.md within this scope; no document was added, moved or linked from a new location, so no further path needs coverage.",
               "evidence": [
-                "git status shows README.md modified and docs/README.md and docs/development/README.md added besides installed content.",
-                "No CONTEXT.md, CONTEXT-MAP.md, or ADR exists yet."
+                "git status shows the agent edits are limited to README.md, docs/development/README.md and the new .factory/Dockerfile.",
+                "No new Markdown file exists under docs, and no link to documentation changed outside the confirmed files."
               ],
               "additionalPaths": []
             }
           }
         },
         {
+          "id": "factory-sandbox-image",
+          "status": "satisfied",
+          "explanation": "`.factory/Dockerfile` installs only Hemiciclo's toolchain on a Debian-based image: `FROM node:24-bookworm`, which provides the Node.js 24 the development guide requires. Git and the GitHub CLI, the guide's other prerequisites, come from the factory's agent layer under the sandbox image contract, so the file installs neither. It creates no user, sets no ENTRYPOINT or CMD, uses no COPY or ADD, and installs no project dependencies. Hemiciclo has no application code, so no other runtime, compiler or package manager is required yet. This repository never had a `.sandcastle/Dockerfile`, so there were no earlier toolchain lines to carry over. Docker was not available to this session, so the build is proven by the pull request's `Sandbox image` job.",
+          "changedPaths": [
+            ".factory/Dockerfile"
+          ],
+          "evidence": [
+            "docs/development/README.md Setup and validation: \"Use Node.js 24 to run the installed `babysit` skill's wait and merge scripts\" -> node:24-bookworm.",
+            "docs/development/README.md names Git and an authenticated `gh`; the scriptorium-v1.0.1 sandbox image contract's agent layer installs Git 2.53.0 and GitHub CLI 2.102.0.",
+            "node:24-bookworm is Debian bookworm with apt-get, matching the contract's base requirement; its existing `node` user is allowed by the contract.",
+            "The repository has no package manifest, so there is nothing for a run to install beyond the toolchain."
+          ]
+        },
+        {
           "id": "github-repository-configuration",
           "status": "satisfied",
-          "explanation": "Both authored fixes reported success with readback: the canonical labels already matched, and the PR integration fix re-activated the required-check ruleset and confirmed squash-only integration with PR-title subjects and PR-body messages.",
+          "explanation": "Both fixes verified the remote configuration of lutzseverino/hemiciclo and found it already canonical: labels, squash-only merging with the PR title and body, and the required `PR metadata` check through the existing `Repo Canon required PR checks` ruleset. The declaration has no project-content targets, and this run writes no reviewer file; `.github/pull-request-reviewer.json` is absent, which its check accepts. The maintainer adds the reviewer file in a separate change after this adoption.",
           "changedPaths": [],
           "evidence": [
-            "canonical-labels returned `unchanged`: labels already match the canonical configuration for lutzseverino/hemiciclo.",
-            "pull-request-integration returned `changed`: updated the required-check ruleset; final readback confirmed PR metadata, squash-only integration, PR-title subjects, and PR-body messages.",
-            "gh api reports ruleset 24612031 enforcement `active`."
+            "canonical-labels: \"GitHub labels already match the canonical configuration for lutzseverino/hemiciclo.\"",
+            "pull-request-integration: \"GitHub PR integration already matches the canonical configuration for lutzseverino/hemiciclo.\"",
+            "gh api repos/lutzseverino/hemiciclo: allow_squash_merge true, allow_merge_commit false, allow_rebase_merge false, squash title PR_TITLE, message PR_BODY; ruleset `Repo Canon required PR checks` is active.",
+            "`.github/pull-request-reviewer.json` does not exist in the working tree."
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "The declaration changes only remote GitHub configuration, so its empty project-content scope is correct.",
+              "explanation": "The fixes changed only remote settings (none, as it turned out) and no project content, so the intentionally empty project-content scope still holds.",
               "evidence": [
-                "origin is the single unambiguous remote https://github.com/lutzseverino/hemiciclo.git with admin access for lutzseverino."
+                "Both fixes reported `unchanged`.",
+                "The only remote is origin, https://github.com/lutzseverino/hemiciclo.git."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "No project files belong to this declaration in the current tree either.",
+              "explanation": "No agent edit touches repository configuration content, and the reviewer file stays out of this run by the maintainer's choice, so the empty scope remains correct.",
               "evidence": [
-                "Contextual work touched only README.md and the two docs indexes."
+                "git status shows no change under .github other than installed exact files.",
+                "No `.github/pull-request-reviewer.json` was created."
               ],
               "additionalPaths": []
             }
@@ -1943,43 +1551,53 @@
         {
           "id": "project-readmes",
           "status": "satisfied",
-          "explanation": "The repository contains no Project: no manifests, workspace or build configuration, source, or component boundaries. The intentionally empty scope therefore needs no Project README. The planned workspace will need a fresh inspection when it exists.",
+          "explanation": "Hemiciclo contains no Project: it is in planning, with no manifests, workspace or build configuration, maintained source, or component boundaries. The only code is installed standards tooling, which is exact-owned. The confirmed empty scope is correct, and the v0.8.0 link requirement has no README to apply to.",
           "changedPaths": [],
           "evidence": [
-            "Tracked files beyond adoption content are README.md and LICENSE only.",
-            "No package.json, pom.xml, pnpm-workspace.yaml, or source directory exists."
+            "git ls-files shows no package.json, pnpm-workspace.yaml, build file or source tree outside installed tooling.",
+            "README.md Status: \"Hemiciclo is in planning, and no application code exists yet.\""
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "No Project boundary existed after fixes.",
+              "explanation": "Installation added only exact standards content and the fixes changed nothing, so no Project appeared.",
               "evidence": [
-                "The tree after fixes held README.md, LICENSE, and installed exact content only."
+                "Post-installation tree adds .factory/config.json, .github/workflows/sandbox-image.yml, skills and licenses, none of which is a Project."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "Contextual work added documentation only, which creates no Project boundary.",
+              "explanation": "The agent's edits add only .factory/Dockerfile and change two documents; none introduces a Project.",
               "evidence": [
-                "The only additions are docs/README.md and docs/development/README.md."
+                "git status lists README.md, docs/development/README.md and .factory/Dockerfile as the agent's changes."
               ],
               "additionalPaths": []
             }
           }
         },
         {
+          "id": "repository-license",
+          "status": "satisfied",
+          "explanation": "The root LICENSE already holds a single, clear license, the GNU Affero General Public License v3.0, and no other root license file exists, so it stays unchanged.",
+          "changedPaths": [],
+          "evidence": [
+            "LICENSE begins \"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007\"; it was established in ec1a658 (\"chore: license Hemiciclo under AGPL-3.0 (#15)\").",
+            "`ls LICENSE*` at the root lists only LICENSE."
+          ]
+        },
+        {
           "id": "repository-readme",
           "status": "satisfied",
-          "explanation": "README.md has a centered title and a one-sentence description of the project. A project-specific Status section states that no code exists yet and points to the wayfinder map, followed by pointer-only Documentation, Contributing, and License sections in the required order. Installation, Features, Usage, and Configuration are omitted because nothing is installable or usable yet. Badges are omitted because the project has no language or runtime a user or contributor needs yet.",
+          "explanation": "README.md keeps its accurate structure and now meets v0.11.0's newcomer rule: its one-sentence description says what Hemiciclo is (the working code name for a planned app giving a neutral, at-a-glance view of every country's political situation) and who it is for (readers). It uses no glossary term, since the repository has no glossary. The Status section explains that no application code exists, so Installation, Features and Usage are omitted. Documentation, Contributing and License each hold only their link, and the License label names the AGPL-3.0 license in LICENSE.",
           "changedPaths": [
             "README.md"
           ],
           "evidence": [
-            "The title is an h1 inside `<div align=\"center\">`, followed by the description paragraph.",
-            "The License section links [GNU Affero General Public License v3.0](LICENSE), matching the committed LICENSE, which is GitHub's agpl-3.0 text merged in #15.",
-            "The Documentation and Contributing sections each hold only their link, to docs/README.md and CONTRIBUTING.md.",
-            "The Status link targets the repository's issues filtered by the `wayfinder:map` label; map issue #1 carries that label."
+            "README.md: centered `<h1>Hemiciclo</h1>` followed by the one-sentence description paragraph.",
+            "Issue #1's Destination and Notes describe a Country Dashboard and Briefs that people read, and call Hemiciclo a code name, not the brand.",
+            "README.md sections: Status, Documentation, Contributing, License, in the recognized relative order.",
+            "License section links `LICENSE` as \"GNU Affero General Public License v3.0\", matching the file."
           ]
         }
       ]

@@ -1,5 +1,7 @@
 import {
   apiEndpoint,
+  describeSettingChanges,
+  requireOverwriteConfirmation,
   githubApi,
   jsonFrom,
   prepareGithubRepository,
@@ -175,6 +177,21 @@ function setupLabels(request) {
       : [{ kind: "update", actual, desired }];
   });
 
+  const changes = actions.flatMap((action) =>
+    action.kind === "update"
+      ? describeSettingChanges(
+          {
+            ...action.actual,
+            color: String(action.actual.color).toLowerCase(),
+            description: action.actual.description ?? "",
+          },
+          action.desired,
+          `label ${action.actual.name}`,
+        )
+      : [],
+  );
+  if (requireOverwriteConfirmation(request, operationName, changes)) return;
+
   const created = [];
   const updated = [];
   for (let index = 0; index < actions.length; index += 1) {
@@ -236,7 +253,7 @@ function setupLabels(request) {
   }
   result(
     "changed",
-    `GitHub label setup changed ${inferred.identity}: ${effects}. Readback confirmed all 12 canonical labels; unrelated labels were preserved.`,
+    `GitHub label setup changed ${inferred.identity}: ${effects}. Readback confirmed all 15 canonical labels; unrelated labels were preserved.`,
   );
 }
 

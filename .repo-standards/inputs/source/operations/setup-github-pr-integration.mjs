@@ -1,5 +1,7 @@
 import {
   apiEndpoint,
+  describeSettingChanges,
+  requireOverwriteConfirmation,
   githubApi,
   jsonFrom,
   prepareGithubRepository,
@@ -10,6 +12,7 @@ import {
 const operationName = "GitHub PR integration setup";
 const checkName = "PR metadata";
 const rulesetName = "Repo Canon required PR checks";
+const workflowPath = ".github/workflows/pr-metadata.yml";
 const mergeSettings = {
   allow_squash_merge: true,
   allow_merge_commit: false,
@@ -92,6 +95,35 @@ function readBranchProtection(identity, defaultBranch, projectRoot) {
       statusChecks: { ...statusChecks, checks: statusChecks.checks ?? [] },
     },
   };
+}
+
+// GitHub runs the pull_request_target workflow that reports PR metadata only
+// from the default branch, so the check can report only once the workflow file
+// is there. The Actions workflow list is no evidence: it keeps a workflow after
+// its file leaves the default branch.
+function readWorkflowPresence(identity, defaultBranch, projectRoot) {
+  const response = githubApi(
+    [
+      apiEndpoint(
+        identity,
+        `/contents/${workflowPath}?ref=${encodeURIComponent(defaultBranch)}`,
+      ),
+    ],
+    projectRoot,
+  );
+  if (
+    !response.ok &&
+    /Not Found/i.test(response.stderr ?? "") &&
+    /HTTP 404/i.test(response.stderr ?? "")
+  ) {
+    return { value: false };
+  }
+  const parsed = jsonFrom(response);
+  if (parsed.error) return parsed;
+  if (parsed.value?.type !== "file") {
+    return { error: "invalid workflow file response" };
+  }
+  return { value: true };
 }
 
 function hasRequiredCheck(statusChecks) {
@@ -372,9 +404,20 @@ function updateMergeSettings(identity, projectRoot, effects) {
   return true;
 }
 
-// Requiring PR metadata is a plan-gated requirement: where GitHub offers
-// neither branch protection nor rulesets, only the merge settings apply.
-function setupOfferedIntegration(identity, repository, projectRoot) {
+// Requiring PR metadata is plan-gated, where GitHub offers neither branch
+// protection nor rulesets, and deferred, while the default branch lacks the
+// workflow that reports it. Either way only the merge settings apply, and the
+// outcome names what applies and why the requirement does not.
+function setupMergeSettingsOnly(identity, repository, request, outcome) {
+  if (
+    requireOverwriteConfirmation(
+      request,
+      operationName,
+      describeSettingChanges(repository, mergeSettings, "repository"),
+    )
+  )
+    return;
+  const projectRoot = request.projectRoot;
   const effects = [];
   if (
     !matchingMergeSettings(repository) &&
@@ -393,15 +436,27 @@ function setupOfferedIntegration(identity, repository, projectRoot) {
     );
     return;
   }
-  const offered = `matches what GitHub offers this repository: squash-only integration, PR-title subjects, and PR-body messages. Requiring \`${checkName}\` is unavailable because GitHub offers neither branch protection nor rulesets for this private repository on its current plan. Upgrade the plan or make the repository public; the next adoption or update then requires the check.`;
   if (effects.length === 0) {
-    result("unchanged", `GitHub PR integration for ${identity} ${offered}`);
+    result("unchanged", outcome.unchanged);
     return;
   }
   result(
     "changed",
-    `${operationName} changed ${identity}: ${effects.join(" and ")}. Final readback confirmed that GitHub PR integration ${offered}`,
+    `${operationName} changed ${identity}: ${effects.join(" and ")}. Final readback confirmed that ${outcome.changed}`,
   );
+}
+
+function unavailableRequirement(identity) {
+  const offered = `matches what GitHub offers this repository: squash-only integration, PR-title subjects, and PR-body messages. Requiring \`${checkName}\` is unavailable because GitHub offers neither branch protection nor rulesets for this private repository on its current plan. Upgrade the plan or make the repository public; the next adoption or update then requires the check.`;
+  return {
+    unchanged: `GitHub PR integration for ${identity} ${offered}`,
+    changed: `GitHub PR integration ${offered}`,
+  };
+}
+
+function deferredRequirement(identity, defaultBranch) {
+  const deferred = `GitHub PR integration for ${identity} applies squash-only integration, PR-title subjects, and PR-body messages. Requiring \`${checkName}\` is deferred because the default branch \`${defaultBranch}\` does not carry the PR metadata validation workflow yet, so GitHub cannot report the check. Merge this adoption; the next adoption or update then requires the check.`;
+  return { unchanged: deferred, changed: deferred };
 }
 
 function setupIntegration(request) {
@@ -441,7 +496,12 @@ function setupIntegration(request) {
     branchBefore.planLimited &&
     rulesetsBefore.planLimited
   ) {
-    setupOfferedIntegration(inferred.identity, repository, request.projectRoot);
+    setupMergeSettingsOnly(
+      inferred.identity,
+      repository,
+      request,
+      unavailableRequirement(inferred.identity),
+    );
     return;
   }
   if (branchBefore.error) {
@@ -455,6 +515,27 @@ function setupIntegration(request) {
     result(
       "blocked",
       `${operationName} could not inspect repository rulesets for ${inferred.identity} (${rulesetsBefore.error}).`,
+    );
+    return;
+  }
+  const workflow = readWorkflowPresence(
+    inferred.identity,
+    repository.default_branch,
+    request.projectRoot,
+  );
+  if (workflow.error) {
+    result(
+      "blocked",
+      `${operationName} could not read ${workflowPath} on ${repository.default_branch} (${workflow.error}).`,
+    );
+    return;
+  }
+  if (!workflow.value) {
+    setupMergeSettingsOnly(
+      inferred.identity,
+      repository,
+      request,
+      deferredRequirement(inferred.identity, repository.default_branch),
     );
     return;
   }
@@ -483,6 +564,34 @@ function setupIntegration(request) {
     if (plan.kind !== "none") checkAction = { type: "ruleset", plan };
   }
   const settingsNeedUpdate = !matchingMergeSettings(repository);
+  const changes = describeSettingChanges(
+    repository,
+    mergeSettings,
+    "repository",
+  );
+  if (checkAction?.type === "branch") {
+    const contexts = branchBefore.value.statusChecks.contexts;
+    changes.push(
+      ...describeSettingChanges(
+        { contexts },
+        { contexts: [...contexts, checkName] },
+        `branch ${repository.default_branch} protection.required_status_checks`,
+      ),
+    );
+  }
+  if (checkAction?.type === "ruleset" && checkAction.plan.kind === "update") {
+    const current = rulesetsBefore.value.find(
+      (ruleset) => ruleset.id === checkAction.plan.id,
+    );
+    changes.push(
+      ...describeSettingChanges(
+        current,
+        checkAction.plan.payload,
+        `ruleset ${current.name} (${current.id})`,
+      ),
+    );
+  }
+  if (requireOverwriteConfirmation(request, operationName, changes)) return;
   const effects = [];
 
   if (checkAction?.type === "branch") {
