@@ -1,7 +1,7 @@
 {
   "format": "repo-standards/scope-history/v5",
   "evidence": "historical",
-  "inspection": "sha256:225b88159fb188ee3600546dec47a0d4edd7ad2afbb1fa1ddafc1509ff0625c8",
+  "inspection": "sha256:63ffb5584b482aa83c65712eaf536f762dc377f1d682fb544c7ed8d3825bd58f",
   "resolved": {
     "description": "The standard profile plus the factory's repository files, for a repository a factory serves",
     "declarations": [
@@ -50,7 +50,6 @@
                 "operations/lib/local-markdown-links.mjs",
                 "operations/lib/documentation-model.mjs",
                 "operations/lib/entry-document.mjs",
-                "discovery/draft-documentation-scope.mjs",
                 "vendor/marked",
                 "vendor/parse5"
               ],
@@ -68,6 +67,7 @@
         "fixes": [],
         "kind": "repository",
         "guidance": "guidance/documentation.md",
+        "rules": "rules/documentation.md",
         "targets": {
           "paths": [
             "docs/README.md",
@@ -98,7 +98,8 @@
         "fixes": [],
         "kind": "file",
         "target": ".factory/Dockerfile",
-        "guidance": "guidance/factory-sandbox-image.md"
+        "guidance": "guidance/factory-sandbox-image.md",
+        "rules": "rules/factory-sandbox-image.md"
       },
       {
         "id": "factory-sandbox-image-workflow",
@@ -125,7 +126,7 @@
               "executable": "node",
               "script": "operations/check-pull-request-reviewer.mjs",
               "resources": [
-                ".agents/skills/babysit/reviewer.mjs"
+                "operations/lib/pull-request-reviewer.mjs"
               ],
               "arguments": []
             },
@@ -162,7 +163,26 @@
               ],
               "version": ">=24.0.0 <25.0.0"
             },
-            "timeout-seconds": 30
+            "timeout-seconds": 30,
+            "remote-setup": {
+              "probe": {
+                "run": {
+                  "executable": "node",
+                  "script": "operations/probe-github-labels.mjs",
+                  "resources": [
+                    "operations/lib/github-operation.mjs"
+                  ],
+                  "arguments": []
+                },
+                "prerequisite": {
+                  "version-arguments": [
+                    "--version"
+                  ],
+                  "version": ">=24.0.0 <25.0.0"
+                },
+                "timeout-seconds": 30
+              }
+            }
           },
           {
             "id": "pull-request-integration",
@@ -180,11 +200,31 @@
               ],
               "version": ">=24.0.0 <25.0.0"
             },
-            "timeout-seconds": 30
+            "timeout-seconds": 30,
+            "remote-setup": {
+              "probe": {
+                "run": {
+                  "executable": "node",
+                  "script": "operations/probe-github-pr-integration.mjs",
+                  "resources": [
+                    "operations/lib/github-operation.mjs"
+                  ],
+                  "arguments": []
+                },
+                "prerequisite": {
+                  "version-arguments": [
+                    "--version"
+                  ],
+                  "version": ">=24.0.0 <25.0.0"
+                },
+                "timeout-seconds": 30
+              }
+            }
           }
         ],
         "kind": "repository",
         "guidance": "guidance/github-repository-configuration.md",
+        "rules": "rules/github-repository-configuration.md",
         "targets": {
           "paths": [],
           "directories": []
@@ -311,6 +351,15 @@
         "exact": ".github/workflows/pr-metadata.yml"
       },
       {
+        "id": "project-agent-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/project.md",
+        "guidance": "guidance/project-agent-guidance.md",
+        "rules": "rules/project-agent-guidance.md"
+      },
+      {
         "id": "project-readmes",
         "checks": [
           {
@@ -338,6 +387,7 @@
         "fixes": [],
         "kind": "repository",
         "guidance": "guidance/project-readmes.md",
+        "rules": "rules/project-readmes.md",
         "targets": {
           "paths": [],
           "directories": []
@@ -365,7 +415,8 @@
         "fixes": [],
         "kind": "file",
         "target": "LICENSE",
-        "guidance": "guidance/repository-license.md"
+        "guidance": "guidance/repository-license.md",
+        "rules": "rules/repository-license.md"
       },
       {
         "id": "repository-readme",
@@ -396,7 +447,8 @@
         "fixes": [],
         "kind": "file",
         "target": "README.md",
-        "guidance": "guidance/repository-readme.md"
+        "guidance": "guidance/repository-readme.md",
+        "rules": "rules/repository-readme.md"
       },
       {
         "id": "skill-babysit",
@@ -608,7 +660,6 @@
                 "operations/lib/local-markdown-links.mjs",
                 "operations/lib/documentation-model.mjs",
                 "operations/lib/entry-document.mjs",
-                "discovery/draft-documentation-scope.mjs",
                 "vendor/marked",
                 "vendor/parse5"
               ],
@@ -626,7 +677,31 @@
         "fixes": [],
         "kind": "repository",
         "guidance": "guidance/documentation.md",
-        "discovery": "discovery/documentation.md"
+        "rules": "rules/documentation.md",
+        "discovery": "discovery/documentation.md",
+        "discovery-script": {
+          "run": {
+            "executable": "node",
+            "script": "discovery/draft-documentation-scope.mjs",
+            "resources": [
+              "standards.yaml",
+              "operations/lib/rendered-markdown.mjs",
+              "operations/lib/local-markdown-links.mjs",
+              "operations/lib/documentation-model.mjs",
+              "operations/lib/entry-document.mjs",
+              "vendor/marked",
+              "vendor/parse5"
+            ],
+            "arguments": []
+          },
+          "prerequisite": {
+            "version-arguments": [
+              "--version"
+            ],
+            "version": ">=24.0.0 <25.0.0"
+          },
+          "timeout-seconds": 60
+        }
       },
       {
         "id": "domain-configuration",
@@ -650,7 +725,8 @@
         "fixes": [],
         "kind": "file",
         "target": ".factory/Dockerfile",
-        "guidance": "guidance/factory-sandbox-image.md"
+        "guidance": "guidance/factory-sandbox-image.md",
+        "rules": "rules/factory-sandbox-image.md"
       },
       {
         "id": "factory-sandbox-image-workflow",
@@ -677,7 +753,7 @@
               "executable": "node",
               "script": "operations/check-pull-request-reviewer.mjs",
               "resources": [
-                ".agents/skills/babysit/reviewer.mjs"
+                "operations/lib/pull-request-reviewer.mjs"
               ],
               "arguments": []
             },
@@ -714,7 +790,26 @@
               ],
               "version": ">=24.0.0 <25.0.0"
             },
-            "timeout-seconds": 30
+            "timeout-seconds": 30,
+            "remote-setup": {
+              "probe": {
+                "run": {
+                  "executable": "node",
+                  "script": "operations/probe-github-labels.mjs",
+                  "resources": [
+                    "operations/lib/github-operation.mjs"
+                  ],
+                  "arguments": []
+                },
+                "prerequisite": {
+                  "version-arguments": [
+                    "--version"
+                  ],
+                  "version": ">=24.0.0 <25.0.0"
+                },
+                "timeout-seconds": 30
+              }
+            }
           },
           {
             "id": "pull-request-integration",
@@ -732,11 +827,31 @@
               ],
               "version": ">=24.0.0 <25.0.0"
             },
-            "timeout-seconds": 30
+            "timeout-seconds": 30,
+            "remote-setup": {
+              "probe": {
+                "run": {
+                  "executable": "node",
+                  "script": "operations/probe-github-pr-integration.mjs",
+                  "resources": [
+                    "operations/lib/github-operation.mjs"
+                  ],
+                  "arguments": []
+                },
+                "prerequisite": {
+                  "version-arguments": [
+                    "--version"
+                  ],
+                  "version": ">=24.0.0 <25.0.0"
+                },
+                "timeout-seconds": 30
+              }
+            }
           }
         ],
         "kind": "repository",
         "guidance": "guidance/github-repository-configuration.md",
+        "rules": "rules/github-repository-configuration.md",
         "discovery": "discovery/github-repository-configuration.md"
       },
       {
@@ -860,6 +975,15 @@
         "exact": ".github/workflows/pr-metadata.yml"
       },
       {
+        "id": "project-agent-guidance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "docs/agents/project.md",
+        "guidance": "guidance/project-agent-guidance.md",
+        "rules": "rules/project-agent-guidance.md"
+      },
+      {
         "id": "project-readmes",
         "checks": [
           {
@@ -887,6 +1011,7 @@
         "fixes": [],
         "kind": "repository",
         "guidance": "guidance/project-readmes.md",
+        "rules": "rules/project-readmes.md",
         "discovery": "discovery/project-readmes.md"
       },
       {
@@ -911,7 +1036,8 @@
         "fixes": [],
         "kind": "file",
         "target": "LICENSE",
-        "guidance": "guidance/repository-license.md"
+        "guidance": "guidance/repository-license.md",
+        "rules": "rules/repository-license.md"
       },
       {
         "id": "repository-readme",
@@ -942,7 +1068,8 @@
         "fixes": [],
         "kind": "file",
         "target": "README.md",
-        "guidance": "guidance/repository-readme.md"
+        "guidance": "guidance/repository-readme.md",
+        "rules": "rules/repository-readme.md"
       },
       {
         "id": "skill-babysit",
@@ -1107,13 +1234,13 @@
     ]
   },
   "discovery": {
-    "identity": "sha256:a5bb84b5b68dc28e5bfcdaff97842c646aafca32ea5680729172e9e37db965e2",
+    "identity": "sha256:bfcea652436388cd298aaceff0907e0ccb34c28864c0c1c9dd8fc8c6e97daddc",
     "proposal": {
       "format": "repo-standards/scope/v2",
       "declarations": [
         {
           "id": "documentation",
-          "coverage": "Drafted from the repository tree by `discovery/draft-documentation-scope.mjs` at Repo Canon v0.12.0 with `--profile factory`: every file Git keeps under the documentation root `docs`, a new index for each of its directories without one, the development guide, and the domain glossaries and context maps the rules identify. `docs` is the only documentation root, and the drafter raised no unresolved questions. The four `docs/agents/` setup files are owned by other declarations and stay out. The repository has no GLOSSARY.md or GLOSSARY-MAP.md, so no glossary migration applies. No moves or link repairs are needed. `docs/agents/project.md` is omitted because no repository-specific agent constraints exist.",
+          "coverage": "Drafted from the repository tree by `discovery/draft-documentation-scope.mjs`: every file Git keeps under the documentation root `docs`, a new index for each of its directories without one, the development guide, and the domain glossaries and context maps the rules identify. Paths other declarations own are left out, and so is each README.md outside the documentation roots. Link-repair files and move destinations enter when the work needs them. The retired Repository Standards skills `.agents/skills/adopt-standards`, `.agents/skills/standards-updates`, `.claude/skills/adopt-standards`, and `.claude/skills/standards-updates` are left out too, because the run that drafts this scope removes them.",
           "candidates": [
             {
               "path": "docs/README.md",
@@ -1168,13 +1295,13 @@
         },
         {
           "id": "github-repository-configuration",
-          "coverage": "This declaration changes only remote GitHub configuration through its authored fixes and checks the optional repository-owned reviewer file `.github/pull-request-reviewer.json` without writing it, so its project-content scope is intentionally empty. The only remote is origin, https://github.com/lutzseverino/hemiciclo.git, an unambiguous public github.com repository on which the authenticated account lutzseverino holds admin permission; the maintainer requested this update, which authorizes the remote configuration fixes. The reviewer file already exists on the default branch and stays as it is in this run.",
+          "coverage": "Intentionally empty local scope: origin names lutzseverino/hemiciclo, the public personal-account repository requested by its maintainer. GitHub configuration adoption is authorized; remote fixes own no local project files. gh API confirms admin access and public visibility; gh variable list shows REPO_CANON_RUNS_ON absent. The owner is a User, so organization-level inheritance does not apply. Preserve the existing repository-owned reviewer configuration.",
           "candidates": [],
           "unresolved": []
         },
         {
           "id": "project-readmes",
-          "coverage": "Hemiciclo is still in planning and holds no application code: no manifests, workspace or build configuration, maintained source, or component boundaries. The only code is installed standards tooling (`scripts/`, `operations/lib/`, `vendor/`, `.github/scripts/`), which is exact-owned content, not a Project under `guidance/project-readmes.md`; `vendor/marked/README.md` and `vendor/parse5/README.md` belong to that exact-owned vendored content. The scope is intentionally empty. The planned pnpm workspace does not exist yet and is not proposed.",
+          "coverage": "Inspected all tracked files, README.md, docs/development/README.md, .factory/config.json, and .factory/Dockerfile. Hemiciclo is planning-only with no app code, manifests, workspaces or internal Projects. scripts, operations, vendor and .agents are installed shared tooling or vendored resources; docs organizes documentation. No independently maintained app, service, library or tool needs a component README. Empty scope is intentional.",
           "candidates": [],
           "unresolved": []
         }
@@ -1199,19 +1326,19 @@
       {
         "id": "documentation",
         "source": "discovery/documentation.md",
-        "sha256": "44330076ff9e94837aca4f1788816209b122c86b0be9a99ea89cc312ac9e386e",
+        "sha256": "30809f225f7c71cd138e7cac835b350e85950b271aad9352aa94808c93864765",
         "executable": false
       },
       {
         "id": "github-repository-configuration",
         "source": "discovery/github-repository-configuration.md",
-        "sha256": "f407019d545c7800ac72ff489ab7427dd4760709dc7a3b2ef6c54a0fdb68d479",
+        "sha256": "05f27e38f22870239eac4f15f63d9ff758c87ff3c8c5098dc7b8cd66a5685616",
         "executable": false
       },
       {
         "id": "project-readmes",
         "source": "discovery/project-readmes.md",
-        "sha256": "f5dac3063de1a68ae17dc93578ee9481ae746acfc4d4b16f84811de5af8ab858",
+        "sha256": "a2cf9e7206712b7b169ebcf901d40ded7fa655100b3afbcf825296e46291b47a",
         "executable": false
       }
     ],
@@ -1259,22 +1386,22 @@
         },
         ".agents/skills/babysit/SKILL.md": {
           "type": "file",
-          "sha256": "14e03172858f7ba2d025d02b0e5ec483ee77390270aaa6224ec447dcd055275f",
+          "sha256": "b6900b4378f0b8b9c46b6c7c6b56cad36e62b4f740e59b835559f21baaeda5f3",
           "executable": false
         },
         ".agents/skills/babysit/merge.mjs": {
           "type": "file",
-          "sha256": "d4a4352b95376f44db1dba5e8e13368846458e91789035874b927b499938e302",
+          "sha256": "f1ba69545f9e7234666e76e1bb64283378419f9e6af963753d141107438b8d3e",
           "executable": false
         },
         ".agents/skills/babysit/reviewer.mjs": {
           "type": "file",
-          "sha256": "1802605d9778698b5d6d6599323648b9329df1b821e18760f13b02c237bf8482",
+          "sha256": "43c0834119e5caad5478abe6216e46ccd9813d8019a2097e7d0bc8616ff94373",
           "executable": false
         },
         ".agents/skills/babysit/wait.mjs": {
           "type": "file",
-          "sha256": "fdedab285461067819b691168af2707e4afc7b44eb1ca9671a6bc840ca05e281",
+          "sha256": "041dd8a31517f0592b2a16d72030d7a95f94d7b643f676f52929895f92eacc46",
           "executable": false
         },
         ".agents/skills/code-review/SKILL.md": {
@@ -1639,7 +1766,7 @@
         },
         ".github/PULL_REQUEST_TEMPLATE.md": {
           "type": "file",
-          "sha256": "4ca0528fa7bab99c0107da587058aebf6cb94c2e9a5760b725f50a3e2c29d2ec",
+          "sha256": "7dcc5881eef1c342a08519750b9beae700f4620d1fdf23c2eb0d9b2dfaec5fd0",
           "executable": false
         },
         ".github/pull-request-reviewer.json": {
@@ -1674,7 +1801,7 @@
         },
         "CONTRIBUTING.md": {
           "type": "file",
-          "sha256": "88565885f90c94d74e06ce36de942532992297b80e1af0a97e26574829c6d529",
+          "sha256": "c25bf00e0380c8ea900f794f68e7f45c0027eae4614f3588d0dc606fec188645",
           "executable": false
         },
         "LICENSE": {
