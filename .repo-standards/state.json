@@ -15,8 +15,8 @@
         "id": "canonical-labels"
       },
       "operationIndex": 0,
-      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
-      "after": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -35,8 +35,8 @@
         "id": "pull-request-integration"
       },
       "operationIndex": 1,
-      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
-      "after": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -78,44 +78,9 @@
           "directories": []
         }
       },
-      "before": "sha256:366c592bd9606de3eadf6878eb2d12026cab7c7fd9353d961d5f4a8718090eb2",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "changes": {
-        ".factory/Dockerfile": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "9579f4d70f551c0684dad995726904eb6fc1d9ae05227188891e1e6127e5ef86",
-            "executable": false
-          }
-        },
-        "README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "4408c1d3708175817140a68296121f593481966182e3f104bee53a9fecd3a02a",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "e747d28a9b57d974c5c8021902802a8294d1c343da84a9e403bc06a8efe1b3ee",
-            "executable": false
-          }
-        },
-        "docs/development/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "bc3c704eb917357dc4b135febb85ac26c97af264587e1206aff7400803734293",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "28c8195c2e41f0e5fc7ec725302a5933f344d9e1441e73b8a573fc3d7b23fd2b",
-            "executable": false
-          }
-        }
-      },
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "changes": {},
       "boundaryChanges": {},
       "violations": []
     },
@@ -156,8 +121,51 @@
           "directories": []
         }
       },
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "changes": {},
+      "boundaryChanges": {},
+      "violations": []
+    },
+    {
+      "phase": "agent",
+      "scope": {
+        "documentation": {
+          "paths": [
+            "docs/README.md",
+            "docs/development/README.md"
+          ],
+          "directories": []
+        },
+        "factory-sandbox-image": {
+          "paths": [
+            ".factory/Dockerfile"
+          ],
+          "directories": []
+        },
+        "github-repository-configuration": {
+          "paths": [],
+          "directories": []
+        },
+        "project-readmes": {
+          "paths": [],
+          "directories": []
+        },
+        "repository-license": {
+          "paths": [
+            "LICENSE"
+          ],
+          "directories": []
+        },
+        "repository-readme": {
+          "paths": [
+            "README.md"
+          ],
+          "directories": []
+        }
+      },
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -179,8 +187,8 @@
         "id": "documentation-navigation"
       },
       "operationIndex": 2,
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -199,8 +207,8 @@
         "id": "pull-request-reviewer"
       },
       "operationIndex": 3,
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -219,8 +227,8 @@
         "id": "project-readme-structure"
       },
       "operationIndex": 4,
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -241,8 +249,8 @@
         "id": "repository-readme-structure"
       },
       "operationIndex": 5,
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -284,8 +292,8 @@
           "directories": []
         }
       },
-      "before": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
-      "after": "sha256:507c2dcbac36428d13b19e8a363bba8dfa662a38fb7f7367868d0d56a023dfcb",
+      "before": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
+      "after": "sha256:3f7bae41accb9f88cfdd20fc3d9ac41b3c9173f8f397a5d043cfca940f694828",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -370,7 +378,7 @@
       "result": {
         "format": "repo-standards/result/v2",
         "status": "passed",
-        "message": "No pull request reviewer is configured."
+        "message": ".github/pull-request-reviewer.json is valid."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/3.stdout",
@@ -422,60 +430,6 @@
   "retryHistory": [],
   "changeSet": [
     {
-      "path": ".agents/skills/LICENSE.humanlayer-skills",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/references/assessment.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/references/discovery.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/references/recovery.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/adopt-standards/references/review.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/ask-matt/PHASE-BOUNDARIES.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/ask-matt/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/ask-matt/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".agents/skills/babysit/SKILL.md",
       "phases": [
         "installation"
@@ -500,355 +454,7 @@
       ]
     },
     {
-      "path": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/deliver/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/deliver/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/diagnosing-bugs/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/CONTEXT-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grill-me/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grill-me/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/handoff/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/handoff/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/improve-codebase-architecture/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/CREDITS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/resolving-merge-conflicts/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/resolving-merge-conflicts/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/domain.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/issue-tracker-github.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/issue-tracker-local.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/setup-matt-pocock-skills/triage-labels.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/standards-updates/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/GLOSSARY-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/LEARNING-RECORD-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/MISSION-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/RESOURCES-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/teach/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-questionnaire/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-questionnaire/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wait-what/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wait-what/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wizard/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wizard/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wizard/template.sh",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/ask-matt",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/babysit",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/deliver",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/grill-me",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/handoff",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/pr",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/resolving-merge-conflicts",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/setup-matt-pocock-skills",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/teach",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/to-questionnaire",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/wait-what",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/wizard",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".factory/Dockerfile",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": ".factory/config.json",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/scripts/validate-pr-metadata.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/workflows/issue-contracts.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/workflows/sandbox-image.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "AGENTS.md",
       "phases": [
         "installation"
       ]
@@ -858,43 +464,13 @@
       "phases": [
         "installation"
       ]
-    },
-    {
-      "path": "README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/agents/domain.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/development/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "operations/lib/rendered-markdown.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "scripts/validate-issue-contract.mjs",
-      "phases": [
-        "installation"
-      ]
     }
   ],
   "lastComplete": {
-    "run": "62ae883c-058a-436e-9e90-2dcc450a5326",
-    "inspection": "sha256:cbf3be401b4c26164a6d31b1cabeb370c91aff739cde5d4ec3a54bc61a0b54a7",
-    "completedAt": "2026-10-13T23:48:13.731Z",
-    "head": "1e88b63569fc97af45bde60a1a59705e56bc5229"
+    "run": "70917fbd-9a12-4b37-a1b0-c2b2f51b558d",
+    "inspection": "sha256:225b88159fb188ee3600546dec47a0d4edd7ad2afbb1fa1ddafc1509ff0625c8",
+    "completedAt": "2026-10-14T13:11:15.706Z",
+    "head": "28a66903dfd222b7537550297e86fe066c6d2343"
   },
   "baselines": {
     "docs/agents/README.md": {
@@ -910,7 +486,7 @@
       "executable": false
     },
     "CONTRIBUTING.md": {
-      "sha256": "88565885f90c94d74e06ce36de942532992297b80e1af0a97e26574829c6d529",
+      "sha256": "c25bf00e0380c8ea900f794f68e7f45c0027eae4614f3588d0dc606fec188645",
       "executable": false
     },
     "docs/agents/domain.md": {
@@ -990,7 +566,7 @@
       "executable": false
     },
     ".github/PULL_REQUEST_TEMPLATE.md": {
-      "sha256": "4ca0528fa7bab99c0107da587058aebf6cb94c2e9a5760b725f50a3e2c29d2ec",
+      "sha256": "7dcc5881eef1c342a08519750b9beae700f4620d1fdf23c2eb0d9b2dfaec5fd0",
       "executable": false
     },
     "operations/lib/rendered-markdown.mjs": {
@@ -998,19 +574,19 @@
       "executable": false
     },
     ".agents/skills/babysit/SKILL.md": {
-      "sha256": "14e03172858f7ba2d025d02b0e5ec483ee77390270aaa6224ec447dcd055275f",
+      "sha256": "b6900b4378f0b8b9c46b6c7c6b56cad36e62b4f740e59b835559f21baaeda5f3",
       "executable": false
     },
     ".agents/skills/babysit/merge.mjs": {
-      "sha256": "d4a4352b95376f44db1dba5e8e13368846458e91789035874b927b499938e302",
+      "sha256": "f1ba69545f9e7234666e76e1bb64283378419f9e6af963753d141107438b8d3e",
       "executable": false
     },
     ".agents/skills/babysit/reviewer.mjs": {
-      "sha256": "1802605d9778698b5d6d6599323648b9329df1b821e18760f13b02c237bf8482",
+      "sha256": "43c0834119e5caad5478abe6216e46ccd9813d8019a2097e7d0bc8616ff94373",
       "executable": false
     },
     ".agents/skills/babysit/wait.mjs": {
-      "sha256": "fdedab285461067819b691168af2707e4afc7b44eb1ca9671a6bc840ca05e281",
+      "sha256": "041dd8a31517f0592b2a16d72030d7a95f94d7b643f676f52929895f92eacc46",
       "executable": false
     },
     ".agents/skills/code-review/SKILL.md": {
@@ -1407,7 +983,7 @@
       "result": {
         "format": "repo-standards/result/v2",
         "status": "passed",
-        "message": "No pull request reviewer is configured."
+        "message": ".github/pull-request-reviewer.json is valid."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/3.stdout",
@@ -1460,43 +1036,40 @@
     {
       "format": "repo-standards/assessment/v3",
       "scope": {
-        "inspection": "sha256:cbf3be401b4c26164a6d31b1cabeb370c91aff739cde5d4ec3a54bc61a0b54a7",
-        "afterFixes": "sha256:01de0d57441be536aa1481f409d6b8a79f6b21f41bd4bdff2189845e4302d392"
+        "inspection": "sha256:225b88159fb188ee3600546dec47a0d4edd7ad2afbb1fa1ddafc1509ff0625c8",
+        "afterFixes": "sha256:2c340e52f0e6b8ec1de740637f91dc4a88bdf1448fa7da93fb5454bd62704cf9"
       },
-      "run": "62ae883c-058a-436e-9e90-2dcc450a5326",
-      "selection": "sha256:57b8b83a7c7eac6f45ca5f5addf501f2c3f30a8a42dad5d487425d29173b8189",
-      "snapshot": "sha256:d0f51e8bc9378029bf5cd14f08d0b8ffaa3a3f366cee160d9873d88144eac9bc",
+      "run": "70917fbd-9a12-4b37-a1b0-c2b2f51b558d",
+      "selection": "sha256:7cad71149b53257c9ca476ec8ecaf13b436c6f09913397a5c5c0493d3e17a3d3",
+      "snapshot": "sha256:2c340e52f0e6b8ec1de740637f91dc4a88bdf1448fa7da93fb5454bd62704cf9",
       "declarations": [
         {
           "id": "documentation",
           "status": "satisfied",
-          "explanation": "The documentation follows the installed contribution guide's documentation rules. `docs/README.md` indexes the two category directories with descriptions of what belongs in each. `docs/development/README.md` gives its purpose and then a Setup and validation section that now states the real prerequisites: Git, an authenticated `gh`, and Node.js 24 for the installed `babysit` skill's wait and merge scripts. It also names the `Sandbox image` workflow this update installs alongside the existing `PR metadata` check and `Issue contracts` workflow. No usage category or root usage index exists, so the newcomer rules for that index do not apply. No glossary exists on the default branch, so no CONTEXT.md rename applies.",
-          "changedPaths": [
-            "docs/development/README.md"
-          ],
+          "explanation": "The documentation already follows the installed contribution guide's documentation rules, whose Documentation section v0.12.0 leaves unchanged, so this update needs no documentation edit. `docs/README.md` indexes the Development and Agent configuration categories, each with a description of what belongs in it. `docs/development/README.md` gives its purpose and then a Setup and validation section stating the real prerequisites (Git, an authenticated `gh`, and Node.js 24 for the installed `babysit` skill's wait and merge scripts), the `git diff --check` validation, and the `PR metadata`, `Issue contracts` and `Sandbox image` workflows. The new pull request rules about closing references and review requests are in `CONTRIBUTING.md`, which the guide links, so the guide needs no copy of them. No usage category exists, so the root usage index rules do not apply, and no CONTEXT.md, CONTEXT-MAP.md, GLOSSARY.md or GLOSSARY-MAP.md exists, so no rename applies.",
+          "changedPaths": [],
           "evidence": [
-            "docs/README.md lists Development and Agent configuration with one `[Title](path): description` item each; each directory has a README.",
-            "docs/development/README.md: purpose sentence, then `## Setup and validation`; the new sentence about Node.js 24 is grounded in `.agents/skills/babysit/SKILL.md` steps 1 and 5, which run `node <skill directory>/wait.mjs` and `merge.mjs`.",
-            "`.github/workflows/sandbox-image.yml` (installed by this run) builds `.factory/Dockerfile` on pull requests that change it, as the development guide now says.",
-            "The documentation scope drafter at v0.11.1 with --profile factory, rerun against the post-installation tree, reports the same two included files and no unresolved questions.",
-            "`git ls-files` shows no CONTEXT.md, CONTEXT-MAP.md, GLOSSARY.md or GLOSSARY-MAP.md, and no docs/usage directory."
+            "docs/README.md lists `[Development](development/README.md)` and `[Agent configuration](agents/README.md)` as `[Title](path): description` items; both directories have a README.",
+            "docs/development/README.md: purpose sentence, then `## Setup and validation` naming Git, `gh`, Node.js 24 for `babysit`, `git diff --check`, and the three workflows tracked under `.github/workflows/`.",
+            "The v0.12.0 CONTRIBUTING.md diff changes only the Pull requests, Merging, findings and Comments sections; the Documentation section is byte-identical to v0.11.1.",
+            "`git ls-files` shows no CONTEXT.md, CONTEXT-MAP.md, GLOSSARY.md or GLOSSARY-MAP.md and no docs/usage directory."
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "After installation and the two unchanged fixes, `docs` is still the only documentation root; its only non-exact Markdown files are docs/README.md and docs/development/README.md, both confirmed. The retired skills' Markdown under `.agents` is gone, so the exclusion of `.agents` no longer covers any document.",
+              "explanation": "After installation and the two fixes, which both reported `unchanged`, `docs` is still the only documentation root, and its only Markdown files not owned by other declarations are docs/README.md and docs/development/README.md, both confirmed.",
               "evidence": [
-                "Reran discovery/draft-documentation-scope.mjs --profile factory against the post-fix tree: two includes, four exact-owned docs/agents excludes, no unresolved questions.",
+                "Reran discovery/draft-documentation-scope.mjs from the v0.12.0 source (dd480fa) with --profile factory against the post-fix tree: the same two includes, the four docs/agents excludes owned by other declarations, and no unresolved questions.",
                 "Both fixes reported `unchanged`, so they changed no project content."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "The refreshed project changed only docs/development/README.md within this scope; no document was added, moved or linked from a new location, so no further path needs coverage.",
+              "explanation": "Contextual work changed no file, so the refreshed project's documentation is the post-fix documentation: no document was added, moved, or linked from a new location, and no further path needs coverage.",
               "evidence": [
-                "git status shows the agent edits are limited to README.md, docs/development/README.md and the new .factory/Dockerfile.",
-                "No new Markdown file exists under docs, and no link to documentation changed outside the confirmed files."
+                "`git status` lists only the exact-content replacements (CONTRIBUTING.md, .github/PULL_REQUEST_TEMPLATE.md, .agents/skills/babysit/*) and .repo-standards/ state; nothing under docs changed.",
+                "The refreshed work request's snapshot equals its afterFixes snapshot."
               ],
               "additionalPaths": []
             }
@@ -1505,44 +1078,42 @@
         {
           "id": "factory-sandbox-image",
           "status": "satisfied",
-          "explanation": "`.factory/Dockerfile` installs only Hemiciclo's toolchain on a Debian-based image: `FROM node:24-bookworm`, which provides the Node.js 24 the development guide requires. Git and the GitHub CLI, the guide's other prerequisites, come from the factory's agent layer under the sandbox image contract, so the file installs neither. It creates no user, sets no ENTRYPOINT or CMD, uses no COPY or ADD, and installs no project dependencies. Hemiciclo has no application code, so no other runtime, compiler or package manager is required yet. This repository never had a `.sandcastle/Dockerfile`, so there were no earlier toolchain lines to carry over. Docker was not available to this session, so the build is proven by the pull request's `Sandbox image` job.",
-          "changedPaths": [
-            ".factory/Dockerfile"
-          ],
+          "explanation": "Assessed again against the v0.12.0 guidance, which now requires the image to provide the Node.js major the installed `babysit` scripts support, currently Node.js 24, even when the development guide names none. `.factory/Dockerfile` already meets it unchanged: it is `FROM node:24-bookworm`, a Debian-based image whose Node.js 24 runs the `babysit` scripts and is also the Node.js 24 the development guide requires. Git and the GitHub CLI, the guide's other prerequisites, come from the factory's agent layer, so the file installs neither. It creates no user, sets no ENTRYPOINT or CMD, uses no COPY or ADD, and installs no project dependencies; Hemiciclo has no application code, so no other toolchain is required. No toolchain needs another Node.js major, so no maintainer question arises. Because the file is unchanged, the pull request's `Sandbox image` job will not rebuild it; Docker was not available to this session to run `node --version` in the image, so the Node.js 24 evidence is the pinned base image tag.",
+          "changedPaths": [],
           "evidence": [
-            "docs/development/README.md Setup and validation: \"Use Node.js 24 to run the installed `babysit` skill's wait and merge scripts\" -> node:24-bookworm.",
-            "docs/development/README.md names Git and an authenticated `gh`; the scriptorium-v1.0.1 sandbox image contract's agent layer installs Git 2.53.0 and GitHub CLI 2.102.0.",
-            "node:24-bookworm is Debian bookworm with apt-get, matching the contract's base requirement; its existing `node` user is allowed by the contract.",
-            "The repository has no package manifest, so there is nothing for a run to install beyond the toolchain."
+            ".factory/Dockerfile: `FROM node:24-bookworm`, with comments only; no other instruction.",
+            "docs/development/README.md Setup and validation: \"Use Node.js 24 to run the installed `babysit` skill's wait and merge scripts\".",
+            ".agents/skills/babysit/SKILL.md steps 1 and 5 run `node <this skill's directory>/wait.mjs` and `merge.mjs`; the SKILL.md names no Node.js major, which only the guidance states as Node.js 24 (already reported upstream as lutzseverino/repo-canon#436).",
+            "The repository never had a `.sandcastle/Dockerfile` (`git log --all -- .sandcastle` is empty), so no migration from it applies."
           ]
         },
         {
           "id": "github-repository-configuration",
           "status": "satisfied",
-          "explanation": "Both fixes verified the remote configuration of lutzseverino/hemiciclo and found it already canonical: labels, squash-only merging with the PR title and body, and the required `PR metadata` check through the existing `Repo Canon required PR checks` ruleset. The declaration has no project-content targets, and this run writes no reviewer file; `.github/pull-request-reviewer.json` is absent, which its check accepts. The maintainer adds the reviewer file in a separate change after this adoption.",
+          "explanation": "Both fixes verified the remote configuration of lutzseverino/hemiciclo and found it already canonical: labels, squash-only merging with the PR title and body, and the required `PR metadata` check through the active `Repo Canon required PR checks` ruleset. The declaration has no project-content targets. `.github/pull-request-reviewer.json` exists on the default branch, configured for the Codex reviewer, and this run leaves it unchanged; v0.12.0's optional `bounds.reviewRequests` is a field a repository adds itself, which this declaration does not write. The `pull-request-reviewer` check validates the existing file.",
           "changedPaths": [],
           "evidence": [
-            "canonical-labels: \"GitHub labels already match the canonical configuration for lutzseverino/hemiciclo.\"",
-            "pull-request-integration: \"GitHub PR integration already matches the canonical configuration for lutzseverino/hemiciclo.\"",
-            "gh api repos/lutzseverino/hemiciclo: allow_squash_merge true, allow_merge_commit false, allow_rebase_merge false, squash title PR_TITLE, message PR_BODY; ruleset `Repo Canon required PR checks` is active.",
-            "`.github/pull-request-reviewer.json` does not exist in the working tree."
+            "Fix `canonical-labels`: unchanged, \"GitHub labels already match the canonical configuration for lutzseverino/hemiciclo.\"",
+            "Fix `pull-request-integration`: unchanged, \"GitHub PR integration already matches the canonical configuration for lutzseverino/hemiciclo.\"",
+            "`gh api repos/lutzseverino/hemiciclo/rulesets` lists `Repo Canon required PR checks`, enforcement active.",
+            ".github/pull-request-reviewer.json: version 1, account `chatgpt-codex-connector[bot]`, bounds responseMinutes 5 and reviewMinutes 30, no reviewRequests."
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "The fixes changed only remote settings (none, as it turned out) and no project content, so the intentionally empty project-content scope still holds.",
+              "explanation": "The fixes changed only remote settings, and both reported `unchanged`; the declaration still needs no project-content path, and origin remains the only, unambiguous github.com remote.",
               "evidence": [
-                "Both fixes reported `unchanged`.",
-                "The only remote is origin, https://github.com/lutzseverino/hemiciclo.git."
+                "`git remote -v` lists only origin, https://github.com/lutzseverino/hemiciclo.git.",
+                "Both fixes reported `unchanged`."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "No agent edit touches repository configuration content, and the reviewer file stays out of this run by the maintainer's choice, so the empty scope remains correct.",
+              "explanation": "Contextual work changed no file, so the intentionally empty scope still covers everything this declaration needs; the reviewer file stays outside it.",
               "evidence": [
-                "git status shows no change under .github other than installed exact files.",
-                "No `.github/pull-request-reviewer.json` was created."
+                "The refreshed work request snapshot equals the afterFixes snapshot.",
+                ".github/pull-request-reviewer.json is unchanged in `git status`."
               ],
               "additionalPaths": []
             }
@@ -1551,26 +1122,27 @@
         {
           "id": "project-readmes",
           "status": "satisfied",
-          "explanation": "Hemiciclo contains no Project: it is in planning, with no manifests, workspace or build configuration, maintained source, or component boundaries. The only code is installed standards tooling, which is exact-owned. The confirmed empty scope is correct, and the v0.8.0 link requirement has no README to apply to.",
+          "explanation": "Hemiciclo still contains no Project: it is in planning, with no manifests, workspace or build configuration, maintained source, or component boundaries. The only code is installed standards tooling, which is exact-owned. The confirmed empty scope is correct, and the guidance is unchanged in v0.12.0.",
           "changedPaths": [],
           "evidence": [
-            "git ls-files shows no package.json, pnpm-workspace.yaml, build file or source tree outside installed tooling.",
-            "README.md Status: \"Hemiciclo is in planning, and no application code exists yet.\""
+            "`git ls-files` outside skills and .repo-standards lists only repository configuration, documentation, LICENSE, and the exact-owned `operations/lib`, `scripts`, `vendor` and `.github/scripts` tooling.",
+            "No package.json, lockfile, or other manifest is tracked outside `.repo-standards/runtime`."
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "Installation added only exact standards content and the fixes changed nothing, so no Project appeared.",
+              "explanation": "Installation replaced only CONTRIBUTING.md, the pull request template and the babysit skill, which add no Project; the repository still has no manifests, workspace or maintained source.",
               "evidence": [
-                "Post-installation tree adds .factory/config.json, .github/workflows/sandbox-image.yml, skills and licenses, none of which is a Project."
+                "`git status` after the fixes lists only exact-content replacements and .repo-standards/ state.",
+                "No manifest is tracked outside `.repo-standards/runtime`."
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "The agent's edits add only .factory/Dockerfile and change two documents; none introduces a Project.",
+              "explanation": "Contextual work changed no file, so no Project appeared and the empty scope remains correct.",
               "evidence": [
-                "git status lists README.md, docs/development/README.md and .factory/Dockerfile as the agent's changes."
+                "The refreshed work request snapshot equals the afterFixes snapshot."
               ],
               "additionalPaths": []
             }
@@ -1579,25 +1151,21 @@
         {
           "id": "repository-license",
           "status": "satisfied",
-          "explanation": "The root LICENSE already holds a single, clear license, the GNU Affero General Public License v3.0, and no other root license file exists, so it stays unchanged.",
+          "explanation": "The root LICENSE holds a single, clear license, the GNU Affero General Public License v3.0, and no other root license file exists, so it stays unchanged.",
           "changedPaths": [],
           "evidence": [
-            "LICENSE begins \"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007\"; it was established in ec1a658 (\"chore: license Hemiciclo under AGPL-3.0 (#15)\").",
-            "`ls LICENSE*` at the root lists only LICENSE."
+            "LICENSE begins `GNU AFFERO GENERAL PUBLIC LICENSE` / `Version 3, 19 November 2007`.",
+            "`git ls-files` shows LICENSE as the only root license file."
           ]
         },
         {
           "id": "repository-readme",
           "status": "satisfied",
-          "explanation": "README.md keeps its accurate structure and now meets v0.11.0's newcomer rule: its one-sentence description says what Hemiciclo is (the working code name for a planned app giving a neutral, at-a-glance view of every country's political situation) and who it is for (readers). It uses no glossary term, since the repository has no glossary. The Status section explains that no application code exists, so Installation, Features and Usage are omitted. Documentation, Contributing and License each hold only their link, and the License label names the AGPL-3.0 license in LICENSE.",
-          "changedPaths": [
-            "README.md"
-          ],
+          "explanation": "README.md already meets the unchanged guidance: a centered title, then a one-sentence description saying what Hemiciclo is (the working code name for a planned app giving a neutral, at-a-glance view of every country's political situation) and who it is for (readers). The repository has no glossary, so the description uses no glossary term. The Status section explains that no application code exists, so Installation, Features and Usage are omitted; no badge is added because users need no language or runtime yet, and Node.js 24 serves only the delivery tooling the development guide describes. Documentation, Contributing and License each hold only their link, and the License label names the AGPL-3.0 license in LICENSE.",
+          "changedPaths": [],
           "evidence": [
-            "README.md: centered `<h1>Hemiciclo</h1>` followed by the one-sentence description paragraph.",
-            "Issue #1's Destination and Notes describe a Country Dashboard and Briefs that people read, and call Hemiciclo a code name, not the brand.",
-            "README.md sections: Status, Documentation, Contributing, License, in the recognized relative order.",
-            "License section links `LICENSE` as \"GNU Affero General Public License v3.0\", matching the file."
+            "README.md: centered `<h1>Hemiciclo</h1>` and one-sentence `<p>` description, then Status, Documentation, Contributing, License.",
+            "Documentation links docs/README.md, Contributing links CONTRIBUTING.md, License links LICENSE labelled `GNU Affero General Public License v3.0`."
           ]
         }
       ]
