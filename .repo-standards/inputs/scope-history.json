@@ -1,7 +1,7 @@
 {
   "format": "repo-standards/scope-history/v5",
   "evidence": "historical",
-  "inspection": "sha256:63ffb5584b482aa83c65712eaf536f762dc377f1d682fb544c7ed8d3825bd58f",
+  "inspection": "sha256:f3925f22538699477e69526c6030c81d3d1d54f10dfa1ca1e0404e0089b48345",
   "resolved": {
     "description": "The standard profile plus the factory's repository files, for a repository a factory serves",
     "declarations": [
@@ -1234,7 +1234,7 @@
     ]
   },
   "discovery": {
-    "identity": "sha256:bfcea652436388cd298aaceff0907e0ccb34c28864c0c1c9dd8fc8c6e97daddc",
+    "identity": "sha256:de8a8b0fac367c3786647632d75b5c6f6479d1636eef64f5a2fae8613b0d8277",
     "proposal": {
       "format": "repo-standards/scope/v2",
       "declarations": [
@@ -1326,7 +1326,7 @@
       {
         "id": "documentation",
         "source": "discovery/documentation.md",
-        "sha256": "30809f225f7c71cd138e7cac835b350e85950b271aad9352aa94808c93864765",
+        "sha256": "0e84c6f5a53f8799568bef21f593c9544a7177428bbda6c8d5be0c594af1f9f7",
         "executable": false
       },
       {
@@ -1354,39 +1354,9 @@
           "sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
           "executable": false
         },
-        ".agents/skills/adopt-standards/SKILL.md": {
-          "type": "file",
-          "sha256": "8abd386956435fec093e74982de0687bd5d9b4be6e77ef28bc3a670f1c415224",
-          "executable": false
-        },
-        ".agents/skills/adopt-standards/agents/openai.yaml": {
-          "type": "file",
-          "sha256": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
-          "executable": false
-        },
-        ".agents/skills/adopt-standards/references/assessment.md": {
-          "type": "file",
-          "sha256": "b0e4fdafd427a18ba834deaa98e4a695884d5e9cd0f959df7f5fbd469e07d881",
-          "executable": false
-        },
-        ".agents/skills/adopt-standards/references/discovery.md": {
-          "type": "file",
-          "sha256": "0170d35348f3b671a1c28da5ca624e32bc71bae32198f16bd42d3b419fb9c980",
-          "executable": false
-        },
-        ".agents/skills/adopt-standards/references/recovery.md": {
-          "type": "file",
-          "sha256": "27d88ef16bccb4538b25c40068b57eb9eeb769320fb1a87b78a33057e7924e06",
-          "executable": false
-        },
-        ".agents/skills/adopt-standards/references/review.md": {
-          "type": "file",
-          "sha256": "9a369755463ded9523d50bf1a338490d156860c7b3516ca27b465427d113bf61",
-          "executable": false
-        },
         ".agents/skills/babysit/SKILL.md": {
           "type": "file",
-          "sha256": "b6900b4378f0b8b9c46b6c7c6b56cad36e62b4f740e59b835559f21baaeda5f3",
+          "sha256": "f17de7f5068281d3ef188e08861d106d9ef3aff377f76e62f792284d9c89feca",
           "executable": false
         },
         ".agents/skills/babysit/merge.mjs": {
@@ -1394,14 +1364,19 @@
           "sha256": "f1ba69545f9e7234666e76e1bb64283378419f9e6af963753d141107438b8d3e",
           "executable": false
         },
+        ".agents/skills/babysit/pull-request-reviewer.mjs": {
+          "type": "file",
+          "sha256": "661a5832f8386352d9f9f7e4f58c6f467a63b56b6b49edb41514266a4ed858d1",
+          "executable": false
+        },
         ".agents/skills/babysit/reviewer.mjs": {
           "type": "file",
-          "sha256": "43c0834119e5caad5478abe6216e46ccd9813d8019a2097e7d0bc8616ff94373",
+          "sha256": "bda1879ccbf256b0da6ab17857e158555068bde14f4f277307ba3d99a110275d",
           "executable": false
         },
         ".agents/skills/babysit/wait.mjs": {
           "type": "file",
-          "sha256": "041dd8a31517f0592b2a16d72030d7a95f94d7b643f676f52929895f92eacc46",
+          "sha256": "93e4f0658510fb799009bf7681ff1844679ed496db648fb6fd8fe90ec9d72124",
           "executable": false
         },
         ".agents/skills/code-review/SKILL.md": {
@@ -1549,6 +1524,16 @@
           "sha256": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc",
           "executable": false
         },
+        ".agents/skills/repository-standards/SKILL.md": {
+          "type": "file",
+          "sha256": "d181a5dd3e3e2e5d5d5a3c5c86f170da4361d567321b8f82340a128920ad388d",
+          "executable": false
+        },
+        ".agents/skills/repository-standards/agents/openai.yaml": {
+          "type": "file",
+          "sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935",
+          "executable": false
+        },
         ".agents/skills/research/SKILL.md": {
           "type": "file",
           "sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4",
@@ -1557,16 +1542,6 @@
         ".agents/skills/research/agents/openai.yaml": {
           "type": "file",
           "sha256": "9b4c470d63221c1f68f22df70b83e2f12401b317babe0d1b7b5f24a974474d0d",
-          "executable": false
-        },
-        ".agents/skills/standards-updates/SKILL.md": {
-          "type": "file",
-          "sha256": "3262164c280f6d05c33fcfed23934dc17955038680ad19a89fef26a5cb4e0999",
-          "executable": false
-        },
-        ".agents/skills/standards-updates/agents/openai.yaml": {
-          "type": "file",
-          "sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935",
           "executable": false
         },
         ".agents/skills/tdd/SKILL.md": {
@@ -1654,10 +1629,6 @@
           "sha256": "eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b",
           "executable": false
         },
-        ".claude/skills/adopt-standards": {
-          "type": "symlink",
-          "target": "../../.agents/skills/adopt-standards"
-        },
         ".claude/skills/babysit": {
           "type": "symlink",
           "target": "../../.agents/skills/babysit"
@@ -1702,13 +1673,13 @@
           "type": "symlink",
           "target": "../../.agents/skills/prototype"
         },
+        ".claude/skills/repository-standards": {
+          "type": "symlink",
+          "target": "../../.agents/skills/repository-standards"
+        },
         ".claude/skills/research": {
           "type": "symlink",
           "target": "../../.agents/skills/research"
-        },
-        ".claude/skills/standards-updates": {
-          "type": "symlink",
-          "target": "../../.agents/skills/standards-updates"
         },
         ".claude/skills/tdd": {
           "type": "symlink",
@@ -1781,17 +1752,17 @@
         },
         ".github/workflows/issue-contracts.yml": {
           "type": "file",
-          "sha256": "440fa7d07a8bbf9f5efe5232b2f863d5767a3ff8616b340f078af1bb1a88439f",
+          "sha256": "edcc96d6d8e040a55cd30ea2109d1291322a85bb66ea9d3a5dbbb43fa00a4588",
           "executable": false
         },
         ".github/workflows/pr-metadata.yml": {
           "type": "file",
-          "sha256": "597e2f3433f75fa25a2a24c9db6be3432c91740a2638ecb3541e549c518e6c82",
+          "sha256": "cb718da096023298e44b962dbb60a42fb0dce52ec0c98f25b9a6307d9e94eac3",
           "executable": false
         },
         ".github/workflows/sandbox-image.yml": {
           "type": "file",
-          "sha256": "71f03ceb1ed50d8d82563c0ef971926cb52bb241b1eb8041f9f7c26e6679722e",
+          "sha256": "598ab9931a8cfc63a3e1d2487fb151eca9b134a5e9a4e3bfa20d4b87b96399b3",
           "executable": false
         },
         "AGENTS.md": {
@@ -1801,7 +1772,7 @@
         },
         "CONTRIBUTING.md": {
           "type": "file",
-          "sha256": "c25bf00e0380c8ea900f794f68e7f45c0027eae4614f3588d0dc606fec188645",
+          "sha256": "a1e6d09d5957e84812609c295f5a0fdbf9777ac9e005338758b74940c4bec7cc",
           "executable": false
         },
         "LICENSE": {
@@ -1811,7 +1782,7 @@
         },
         "README.md": {
           "type": "file",
-          "sha256": "e747d28a9b57d974c5c8021902802a8294d1c343da84a9e403bc06a8efe1b3ee",
+          "sha256": "a0e1a4590b5fdc1535dd10e78a1644e18b09710eaa23e7b583149e02176ab011",
           "executable": false
         },
         "docs/README.md": {
@@ -1911,7 +1882,6 @@
         ".agents/skills": [
           ".agents/skills/LICENSE.humanlayer-skills",
           ".agents/skills/LICENSE.mattpocock-skills",
-          ".agents/skills/adopt-standards",
           ".agents/skills/babysit",
           ".agents/skills/code-review",
           ".agents/skills/codebase-design",
@@ -1923,8 +1893,8 @@
           ".agents/skills/improve-codebase-architecture",
           ".agents/skills/pr",
           ".agents/skills/prototype",
+          ".agents/skills/repository-standards",
           ".agents/skills/research",
-          ".agents/skills/standards-updates",
           ".agents/skills/tdd",
           ".agents/skills/to-spec",
           ".agents/skills/to-tickets",
@@ -1932,23 +1902,10 @@
           ".agents/skills/wayfinder",
           ".agents/skills/writing-for-agents"
         ],
-        ".agents/skills/adopt-standards": [
-          ".agents/skills/adopt-standards/SKILL.md",
-          ".agents/skills/adopt-standards/agents",
-          ".agents/skills/adopt-standards/references"
-        ],
-        ".agents/skills/adopt-standards/agents": [
-          ".agents/skills/adopt-standards/agents/openai.yaml"
-        ],
-        ".agents/skills/adopt-standards/references": [
-          ".agents/skills/adopt-standards/references/assessment.md",
-          ".agents/skills/adopt-standards/references/discovery.md",
-          ".agents/skills/adopt-standards/references/recovery.md",
-          ".agents/skills/adopt-standards/references/review.md"
-        ],
         ".agents/skills/babysit": [
           ".agents/skills/babysit/SKILL.md",
           ".agents/skills/babysit/merge.mjs",
+          ".agents/skills/babysit/pull-request-reviewer.mjs",
           ".agents/skills/babysit/reviewer.mjs",
           ".agents/skills/babysit/wait.mjs"
         ],
@@ -2034,19 +1991,19 @@
         ".agents/skills/prototype/agents": [
           ".agents/skills/prototype/agents/openai.yaml"
         ],
+        ".agents/skills/repository-standards": [
+          ".agents/skills/repository-standards/SKILL.md",
+          ".agents/skills/repository-standards/agents"
+        ],
+        ".agents/skills/repository-standards/agents": [
+          ".agents/skills/repository-standards/agents/openai.yaml"
+        ],
         ".agents/skills/research": [
           ".agents/skills/research/SKILL.md",
           ".agents/skills/research/agents"
         ],
         ".agents/skills/research/agents": [
           ".agents/skills/research/agents/openai.yaml"
-        ],
-        ".agents/skills/standards-updates": [
-          ".agents/skills/standards-updates/SKILL.md",
-          ".agents/skills/standards-updates/agents"
-        ],
-        ".agents/skills/standards-updates/agents": [
-          ".agents/skills/standards-updates/agents/openai.yaml"
         ],
         ".agents/skills/tdd": [
           ".agents/skills/tdd/SKILL.md",
@@ -2099,7 +2056,6 @@
           ".claude/skills"
         ],
         ".claude/skills": [
-          ".claude/skills/adopt-standards",
           ".claude/skills/babysit",
           ".claude/skills/code-review",
           ".claude/skills/codebase-design",
@@ -2111,8 +2067,8 @@
           ".claude/skills/improve-codebase-architecture",
           ".claude/skills/pr",
           ".claude/skills/prototype",
+          ".claude/skills/repository-standards",
           ".claude/skills/research",
-          ".claude/skills/standards-updates",
           ".claude/skills/tdd",
           ".claude/skills/to-spec",
           ".claude/skills/to-tickets",
@@ -2191,15 +2147,6 @@
         ".agents/skills": {
           "type": "directory"
         },
-        ".agents/skills/adopt-standards": {
-          "type": "directory"
-        },
-        ".agents/skills/adopt-standards/agents": {
-          "type": "directory"
-        },
-        ".agents/skills/adopt-standards/references": {
-          "type": "directory"
-        },
         ".agents/skills/babysit": {
           "type": "directory"
         },
@@ -2266,16 +2213,16 @@
         ".agents/skills/prototype/agents": {
           "type": "directory"
         },
+        ".agents/skills/repository-standards": {
+          "type": "directory"
+        },
+        ".agents/skills/repository-standards/agents": {
+          "type": "directory"
+        },
         ".agents/skills/research": {
           "type": "directory"
         },
         ".agents/skills/research/agents": {
-          "type": "directory"
-        },
-        ".agents/skills/standards-updates": {
-          "type": "directory"
-        },
-        ".agents/skills/standards-updates/agents": {
           "type": "directory"
         },
         ".agents/skills/tdd": {
@@ -2390,15 +2337,6 @@
         ".agents/skills/.gitignore": {
           "type": "missing"
         },
-        ".agents/skills/adopt-standards/.gitignore": {
-          "type": "missing"
-        },
-        ".agents/skills/adopt-standards/agents/.gitignore": {
-          "type": "missing"
-        },
-        ".agents/skills/adopt-standards/references/.gitignore": {
-          "type": "missing"
-        },
         ".agents/skills/babysit/.gitignore": {
           "type": "missing"
         },
@@ -2465,16 +2403,16 @@
         ".agents/skills/prototype/agents/.gitignore": {
           "type": "missing"
         },
+        ".agents/skills/repository-standards/.gitignore": {
+          "type": "missing"
+        },
+        ".agents/skills/repository-standards/agents/.gitignore": {
+          "type": "missing"
+        },
         ".agents/skills/research/.gitignore": {
           "type": "missing"
         },
         ".agents/skills/research/agents/.gitignore": {
-          "type": "missing"
-        },
-        ".agents/skills/standards-updates/.gitignore": {
-          "type": "missing"
-        },
-        ".agents/skills/standards-updates/agents/.gitignore": {
           "type": "missing"
         },
         ".agents/skills/tdd/.gitignore": {

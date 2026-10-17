@@ -3,16 +3,16 @@
   "selection": {
     "cli": {
       "package": "@lutzseverino/repo-standards",
-      "version": "7.0.0"
+      "version": "7.1.0"
     },
     "standards": {
       "repository": "https://github.com/lutzseverino/repo-canon",
-      "version": "v0.14.0",
-      "commit": "6e7f54dc431cfd848d5e2f217eae352356c28d48"
+      "version": "v0.14.1",
+      "commit": "091289e64b77e3b5d703fda6a99422c4d7018a2c"
     },
     "profile": "factory"
   },
-  "inspection": "sha256:63ffb5584b482aa83c65712eaf536f762dc377f1d682fb544c7ed8d3825bd58f",
+  "inspection": "sha256:f3925f22538699477e69526c6030c81d3d1d54f10dfa1ca1e0404e0089b48345",
   "files": {
     "docs/agents/README.md": {
       "sha256": "a78a8a4934c9de37cfcd11be23ce3dd58462108fa53b6cdaead4af18ca7e773b",
@@ -335,7 +335,7 @@
       "executable": false
     },
     ".agents/skills/repository-standards/SKILL.md": {
-      "sha256": "d181a5dd3e3e2e5d5d5a3c5c86f170da4361d567321b8f82340a128920ad388d",
+      "sha256": "4e331d32a27f003027cfbcfce376f49c8e0743142dc6cd653fe7e31052f61450",
       "executable": false
     },
     ".agents/skills/repository-standards/agents/openai.yaml": {
@@ -363,7 +363,7 @@
       "executable": false
     },
     ".repo-standards/inputs/source/discovery/documentation.md": {
-      "sha256": "30809f225f7c71cd138e7cac835b350e85950b271aad9352aa94808c93864765",
+      "sha256": "0e84c6f5a53f8799568bef21f593c9544a7177428bbda6c8d5be0c594af1f9f7",
       "executable": false
     },
     ".repo-standards/inputs/source/rules/documentation.md": {
@@ -419,11 +419,11 @@
       "executable": false
     },
     ".repo-standards/inputs/source/discovery/draft-documentation-scope.mjs": {
-      "sha256": "6948bc7e76fbeabb857808034f6d9921ceae9b2e89c2750aa2279c87548f4369",
+      "sha256": "a894cd133f3c76e873f7b9493c849082c7eebeb3efc1b7642b31219f1638a143",
       "executable": false
     },
     ".repo-standards/inputs/source/standards.yaml": {
-      "sha256": "aa7ecb0691abde570bce5f57461c161ab88b0ccf9eefd55597551350f0e49f6d",
+      "sha256": "60bce564e748a3d0a0da41613135c4680a7c6df6a344de02b3668fc659a8c2b5",
       "executable": false
     },
     ".repo-standards/inputs/source/vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/domain.md": {
@@ -435,7 +435,7 @@
       "executable": false
     },
     ".repo-standards/inputs/source/guidance/factory-sandbox-image.md": {
-      "sha256": "3b0afad4fed91abfad49503eb2f94aba68952daf7c205040efa390ea6b969131",
+      "sha256": "a3a16737263236b5e17b69a2c7ea033e8ceb0bcd8d122a78b28403640ce5623c",
       "executable": false
     },
     ".repo-standards/inputs/source/rules/factory-sandbox-image.md": {
@@ -467,7 +467,7 @@
       "executable": false
     },
     ".repo-standards/inputs/source/operations/lib/github-operation.mjs": {
-      "sha256": "de5e59ed3493f54d7cc7584554ea6857cbd39f20d34dda0aacafe13cf679e6e7",
+      "sha256": "44ff106ba882174779780047a8b6ba64cb3fc3f609d977739743a1831b89c45f",
       "executable": false
     },
     ".repo-standards/inputs/source/LICENSE": {
@@ -799,11 +799,11 @@
       "executable": false
     },
     ".repo-standards/inputs/standards.yaml": {
-      "sha256": "2eb11b4c453af57996348bf81504a0e8af0fe89e21e365cd663a492af9c85149",
+      "sha256": "21eaef0fe5eb089cd234b5fe61151c2895467cc75bafff8674851976e4125597",
       "executable": false
     },
     ".repo-standards/inputs/metadata.json": {
-      "sha256": "4d14aa92b5759de1703322cd36042bca03fccada11343bf43aec7cd1ea4c84a2",
+      "sha256": "e191a15d12dfa26e8b576cb5778b9b295dda22eb4e92e125739ff027a0a6411c",
       "executable": false
     },
     ".repo-standards/inputs/resolved.json": {
@@ -811,7 +811,7 @@
       "executable": false
     },
     ".repo-standards/inputs/scope-history.json": {
-      "sha256": "195c6608105ac112cb3b15e63349bdc159892c7c71f57a49ed4ec1ea2cff6f87",
+      "sha256": "0b5e7abdccd0eaf79d8835060305904bbffc61c3cad48ce8077791e1c9b3585d",
       "executable": false
     },
     ".repo-standards/rules/documentation.md": {
@@ -843,11 +843,11 @@
       "executable": false
     },
     ".repo-standards/rules/README.md": {
-      "sha256": "040c06e4610facb46a894c2d43aac1acb708672517e7610259c508f0d2a44468",
+      "sha256": "420891cc9986a1b801144849cd674f1aa5c895afc747c31d30876a2152bb3c54",
       "executable": false
     },
     ".repo-standards/selection.yaml": {
-      "sha256": "241937c454c662a23ae0f98d9269fdc2d61eb63585f7771a261646385689bead",
+      "sha256": "b4c4d2bba0b35a78a915f5cd00c1181d548edf117fdcd5f69fa520a81f8a19c7",
       "executable": false
     },
     ".repo-standards/.gitignore": {
@@ -855,16 +855,16 @@
       "executable": false
     },
     ".repo-standards/runtime/package.json": {
-      "sha256": "b1c280df1d6c799719c6f00f8b36e156f6a83566cda3c4045e7e87f9dac0354d",
+      "sha256": "1adbea32f994f80766937da60f13948f755bfc38f5ea52d93c149ee128b5ccfc",
       "executable": false
     },
     ".repo-standards/runtime/package-lock.json": {
-      "sha256": "4f3ece1fd01b8ca2fdfdcec8835dd6a2de9abc55e03f850b809ec356261c7c63",
+      "sha256": "1cdfbd3b5ff507771b922cbc7a4d1100ae01594df9a30953671b274ba1235d16",
       "executable": false
     }
   },
   "state": {
-    "sha256": "b93dceecf6ff3a7dbc8ba10344c73aff97cef83898ee55207a1603602377ab00",
+    "sha256": "19a5da4a10e85fb5ee01dafebb1c6c40f6b8ebbfc9579fa98ab7ccade58cdb92",
     "executable": false
   }
 }
