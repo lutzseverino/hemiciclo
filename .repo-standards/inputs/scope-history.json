@@ -1,9 +1,9 @@
 {
   "format": "repo-standards/scope-history/v5",
   "evidence": "historical",
-  "inspection": "sha256:f3925f22538699477e69526c6030c81d3d1d54f10dfa1ca1e0404e0089b48345",
+  "inspection": "sha256:9df75da122d70de4f4bd8e90405551ff8c42983537b3df1696dc3e9d5ab93a10",
   "resolved": {
-    "description": "The standard profile plus the factory's repository files, for a repository a factory serves",
+    "description": "The standard profile plus the factory's repository files and workflow rules, for a repository a factory serves",
     "declarations": [
       {
         "id": "agent-configuration-index",
@@ -59,7 +59,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -110,6 +110,18 @@
         "exact": ".github/workflows/sandbox-image.yml"
       },
       {
+        "id": "factory-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/factory-workflow.md",
+        "rules": "rules/factory-workflow.md",
+        "targets": {
+          "paths": [],
+          "directories": []
+        }
+      },
+      {
         "id": "feature-request-template",
         "checks": [],
         "fixes": [],
@@ -134,7 +146,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -161,7 +173,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30,
             "remote-setup": {
@@ -178,7 +190,7 @@
                   "version-arguments": [
                     "--version"
                   ],
-                  "version": ">=24.0.0 <25.0.0"
+                  "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
                 },
                 "timeout-seconds": 30
               }
@@ -198,7 +210,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30,
             "remote-setup": {
@@ -215,7 +227,7 @@
                   "version-arguments": [
                     "--version"
                   ],
-                  "version": ">=24.0.0 <25.0.0"
+                  "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
                 },
                 "timeout-seconds": 30
               }
@@ -379,7 +391,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -439,7 +451,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -613,7 +625,7 @@
     ]
   },
   "sourceResolved": {
-    "description": "The standard profile plus the factory's repository files, for a repository a factory serves",
+    "description": "The standard profile plus the factory's repository files and workflow rules, for a repository a factory serves",
     "declarations": [
       {
         "id": "agent-configuration-index",
@@ -669,7 +681,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -698,7 +710,7 @@
             "version-arguments": [
               "--version"
             ],
-            "version": ">=24.0.0 <25.0.0"
+            "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
           },
           "timeout-seconds": 60
         }
@@ -737,6 +749,15 @@
         "exact": ".github/workflows/sandbox-image.yml"
       },
       {
+        "id": "factory-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/factory-workflow.md",
+        "rules": "rules/factory-workflow.md",
+        "discovery": "discovery/factory-workflow.md"
+      },
+      {
         "id": "feature-request-template",
         "checks": [],
         "fixes": [],
@@ -761,7 +782,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -788,7 +809,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30,
             "remote-setup": {
@@ -805,7 +826,7 @@
                   "version-arguments": [
                     "--version"
                   ],
-                  "version": ">=24.0.0 <25.0.0"
+                  "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
                 },
                 "timeout-seconds": 30
               }
@@ -825,7 +846,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30,
             "remote-setup": {
@@ -842,7 +863,7 @@
                   "version-arguments": [
                     "--version"
                   ],
-                  "version": ">=24.0.0 <25.0.0"
+                  "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
                 },
                 "timeout-seconds": 30
               }
@@ -1003,7 +1024,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -1060,7 +1081,7 @@
               "version-arguments": [
                 "--version"
               ],
-              "version": ">=24.0.0 <25.0.0"
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
             },
             "timeout-seconds": 30
           }
@@ -1234,7 +1255,7 @@
     ]
   },
   "discovery": {
-    "identity": "sha256:de8a8b0fac367c3786647632d75b5c6f6479d1636eef64f5a2fae8613b0d8277",
+    "identity": "sha256:bbac3e1cb173624b2394283d0c31cf0d98f9af2cc79a025d89283e1715e1f599",
     "proposal": {
       "format": "repo-standards/scope/v2",
       "declarations": [
@@ -1294,6 +1315,12 @@
           "unresolved": []
         },
         {
+          "id": "factory-workflow",
+          "coverage": "Intentionally empty content scope. The factory workflow declaration governs work throughout this factory-profile repository, including tracker work that changes no files. .factory/config.json stays owned by its separate exact declaration.",
+          "candidates": [],
+          "unresolved": []
+        },
+        {
           "id": "github-repository-configuration",
           "coverage": "Intentionally empty local scope: origin names lutzseverino/hemiciclo, the public personal-account repository requested by its maintainer. GitHub configuration adoption is authorized; remote fixes own no local project files. gh API confirms admin access and public visibility; gh variable list shows REPO_CANON_RUNS_ON absent. The owner is a User, so organization-level inheritance does not apply. Preserve the existing repository-owned reviewer configuration.",
           "candidates": [],
@@ -1327,6 +1354,12 @@
         "id": "documentation",
         "source": "discovery/documentation.md",
         "sha256": "0e84c6f5a53f8799568bef21f593c9544a7177428bbda6c8d5be0c594af1f9f7",
+        "executable": false
+      },
+      {
+        "id": "factory-workflow",
+        "source": "discovery/factory-workflow.md",
+        "sha256": "6f8e546cfa909fd4fd090d8555de882d8a786975c088d649a490192f30ad3b7a",
         "executable": false
       },
       {
@@ -1526,7 +1559,7 @@
         },
         ".agents/skills/repository-standards/SKILL.md": {
           "type": "file",
-          "sha256": "d181a5dd3e3e2e5d5d5a3c5c86f170da4361d567321b8f82340a128920ad388d",
+          "sha256": "4e331d32a27f003027cfbcfce376f49c8e0743142dc6cd653fe7e31052f61450",
           "executable": false
         },
         ".agents/skills/repository-standards/agents/openai.yaml": {
