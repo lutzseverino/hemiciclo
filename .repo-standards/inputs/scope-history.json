@@ -1,7 +1,7 @@
 {
-  "format": "repo-standards/scope-history/v5",
+  "format": "repo-standards/scope-history/v6",
   "evidence": "historical",
-  "inspection": "sha256:9df75da122d70de4f4bd8e90405551ff8c42983537b3df1696dc3e9d5ab93a10",
+  "inspection": "sha256:d1c3630d2e1e591ad2c474a3ccc6100d66c48c286c57ef64e8f7b041380b8f32",
   "resolved": {
     "description": "The standard profile plus the factory's repository files and workflow rules, for a repository a factory serves",
     "declarations": [
@@ -130,6 +130,15 @@
         "exact": ".github/ISSUE_TEMPLATE/feature-request.yml"
       },
       {
+        "id": "git-attributes",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".gitattributes",
+        "guidance": "guidance/git-attributes.md",
+        "rules": "rules/git-attributes.md"
+      },
+      {
         "id": "github-repository-configuration",
         "checks": [
           {
@@ -139,6 +148,24 @@
               "script": "operations/check-pull-request-reviewer.mjs",
               "resources": [
                 "operations/lib/pull-request-reviewer.mjs"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
+            },
+            "timeout-seconds": 30
+          },
+          {
+            "id": "factory-review-policy",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-factory-review-policy.mjs",
+              "resources": [
+                "operations/lib/review-policy.mjs"
               ],
               "arguments": []
             },
@@ -159,6 +186,9 @@
               "script": "operations/setup-github-labels.mjs",
               "resources": [
                 "operations/lib/github-operation.mjs",
+                "vendor/postern/postern.mjs",
+                "vendor/postern/LICENSE",
+                "vendor/postern/README.md",
                 "LICENSE",
                 "THIRD_PARTY_NOTICES.md",
                 "vendor/mattpocock-skills/LICENSE",
@@ -182,7 +212,10 @@
                   "executable": "node",
                   "script": "operations/probe-github-labels.mjs",
                   "resources": [
-                    "operations/lib/github-operation.mjs"
+                    "operations/lib/github-operation.mjs",
+                    "vendor/postern/postern.mjs",
+                    "vendor/postern/LICENSE",
+                    "vendor/postern/README.md"
                   ],
                   "arguments": []
                 },
@@ -202,7 +235,10 @@
               "executable": "node",
               "script": "operations/setup-github-pr-integration.mjs",
               "resources": [
-                "operations/lib/github-operation.mjs"
+                "operations/lib/github-operation.mjs",
+                "vendor/postern/postern.mjs",
+                "vendor/postern/LICENSE",
+                "vendor/postern/README.md"
               ],
               "arguments": []
             },
@@ -219,7 +255,10 @@
                   "executable": "node",
                   "script": "operations/probe-github-pr-integration.mjs",
                   "resources": [
-                    "operations/lib/github-operation.mjs"
+                    "operations/lib/github-operation.mjs",
+                    "vendor/postern/postern.mjs",
+                    "vendor/postern/LICENSE",
+                    "vendor/postern/README.md"
                   ],
                   "arguments": []
                 },
@@ -241,6 +280,14 @@
           "paths": [],
           "directories": []
         }
+      },
+      {
+        "id": "github-validator-trigger",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/scripts/validate.mjs",
+        "exact": ".github/scripts/validate.mjs"
       },
       {
         "id": "humanlayer-skills-license",
@@ -345,6 +392,30 @@
         "kind": "file",
         "target": "vendor/parse5/README.md",
         "exact": "vendor/parse5/README.md"
+      },
+      {
+        "id": "postern-bundle",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/postern.mjs",
+        "exact": "vendor/postern/postern.mjs"
+      },
+      {
+        "id": "postern-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/LICENSE",
+        "exact": "vendor/postern/LICENSE"
+      },
+      {
+        "id": "postern-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/README.md",
+        "exact": "vendor/postern/README.md"
       },
       {
         "id": "pr-metadata-validator",
@@ -535,6 +606,14 @@
         "source": "vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture"
       },
       {
+        "id": "skill-orchestrate",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "orchestrate",
+        "source": ".agents/skills/orchestrate"
+      },
+      {
         "id": "skill-pr",
         "checks": [],
         "fixes": [],
@@ -588,7 +667,7 @@
         "fixes": [],
         "kind": "skill",
         "name": "triage",
-        "source": "vendor/mattpocock-skills/skills/engineering/triage"
+        "source": ".agents/skills/triage"
       },
       {
         "id": "skill-wayfinder",
@@ -615,12 +694,40 @@
         "exact": ".github/ISSUE_TEMPLATE/specification.yml"
       },
       {
+        "id": "standards-update-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/standards-update.yml",
+        "exact": ".github/workflows/standards-update.yml"
+      },
+      {
         "id": "triage-label-configuration",
         "checks": [],
         "fixes": [],
         "kind": "file",
         "target": "docs/agents/triage-labels.md",
         "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/triage-labels.md"
+      },
+      {
+        "id": "typescript-node-stack",
+        "checks": [],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/typescript-node-stack.md",
+        "targets": {
+          "paths": [],
+          "directories": []
+        },
+        "no-scope": true
+      },
+      {
+        "id": "validator-command",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "scripts/validate.mjs",
+        "exact": "scripts/validate.mjs"
       }
     ]
   },
@@ -766,6 +873,15 @@
         "exact": ".github/ISSUE_TEMPLATE/feature-request.yml"
       },
       {
+        "id": "git-attributes",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".gitattributes",
+        "guidance": "guidance/git-attributes.md",
+        "rules": "rules/git-attributes.md"
+      },
+      {
         "id": "github-repository-configuration",
         "checks": [
           {
@@ -775,6 +891,24 @@
               "script": "operations/check-pull-request-reviewer.mjs",
               "resources": [
                 "operations/lib/pull-request-reviewer.mjs"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
+            },
+            "timeout-seconds": 30
+          },
+          {
+            "id": "factory-review-policy",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-factory-review-policy.mjs",
+              "resources": [
+                "operations/lib/review-policy.mjs"
               ],
               "arguments": []
             },
@@ -795,6 +929,9 @@
               "script": "operations/setup-github-labels.mjs",
               "resources": [
                 "operations/lib/github-operation.mjs",
+                "vendor/postern/postern.mjs",
+                "vendor/postern/LICENSE",
+                "vendor/postern/README.md",
                 "LICENSE",
                 "THIRD_PARTY_NOTICES.md",
                 "vendor/mattpocock-skills/LICENSE",
@@ -818,7 +955,10 @@
                   "executable": "node",
                   "script": "operations/probe-github-labels.mjs",
                   "resources": [
-                    "operations/lib/github-operation.mjs"
+                    "operations/lib/github-operation.mjs",
+                    "vendor/postern/postern.mjs",
+                    "vendor/postern/LICENSE",
+                    "vendor/postern/README.md"
                   ],
                   "arguments": []
                 },
@@ -838,7 +978,10 @@
               "executable": "node",
               "script": "operations/setup-github-pr-integration.mjs",
               "resources": [
-                "operations/lib/github-operation.mjs"
+                "operations/lib/github-operation.mjs",
+                "vendor/postern/postern.mjs",
+                "vendor/postern/LICENSE",
+                "vendor/postern/README.md"
               ],
               "arguments": []
             },
@@ -855,7 +998,10 @@
                   "executable": "node",
                   "script": "operations/probe-github-pr-integration.mjs",
                   "resources": [
-                    "operations/lib/github-operation.mjs"
+                    "operations/lib/github-operation.mjs",
+                    "vendor/postern/postern.mjs",
+                    "vendor/postern/LICENSE",
+                    "vendor/postern/README.md"
                   ],
                   "arguments": []
                 },
@@ -874,6 +1020,14 @@
         "guidance": "guidance/github-repository-configuration.md",
         "rules": "rules/github-repository-configuration.md",
         "discovery": "discovery/github-repository-configuration.md"
+      },
+      {
+        "id": "github-validator-trigger",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/scripts/validate.mjs",
+        "exact": ".github/scripts/validate.mjs"
       },
       {
         "id": "humanlayer-skills-license",
@@ -978,6 +1132,30 @@
         "kind": "file",
         "target": "vendor/parse5/README.md",
         "exact": "vendor/parse5/README.md"
+      },
+      {
+        "id": "postern-bundle",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/postern.mjs",
+        "exact": "vendor/postern/postern.mjs"
+      },
+      {
+        "id": "postern-license",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/LICENSE",
+        "exact": "vendor/postern/LICENSE"
+      },
+      {
+        "id": "postern-provenance",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "vendor/postern/README.md",
+        "exact": "vendor/postern/README.md"
       },
       {
         "id": "pr-metadata-validator",
@@ -1165,6 +1343,14 @@
         "source": "vendor/mattpocock-skills/skills/engineering/improve-codebase-architecture"
       },
       {
+        "id": "skill-orchestrate",
+        "checks": [],
+        "fixes": [],
+        "kind": "skill",
+        "name": "orchestrate",
+        "source": ".agents/skills/orchestrate"
+      },
+      {
         "id": "skill-pr",
         "checks": [],
         "fixes": [],
@@ -1218,7 +1404,7 @@
         "fixes": [],
         "kind": "skill",
         "name": "triage",
-        "source": "vendor/mattpocock-skills/skills/engineering/triage"
+        "source": ".agents/skills/triage"
       },
       {
         "id": "skill-wayfinder",
@@ -1245,17 +1431,81 @@
         "exact": ".github/ISSUE_TEMPLATE/specification.yml"
       },
       {
+        "id": "standards-update-workflow",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": ".github/workflows/standards-update.yml",
+        "exact": ".github/workflows/standards-update.yml"
+      },
+      {
         "id": "triage-label-configuration",
         "checks": [],
         "fixes": [],
         "kind": "file",
         "target": "docs/agents/triage-labels.md",
         "exact": "vendor/mattpocock-skills/skills/engineering/setup-matt-pocock-skills/triage-labels.md"
+      },
+      {
+        "id": "typescript-node-stack",
+        "checks": [
+          {
+            "id": "typescript-node-stack-manifests",
+            "run": {
+              "executable": "node",
+              "script": "operations/check-typescript-node-stack.mjs",
+              "resources": [
+                "operations/lib/typescript-node-stack.mjs",
+                "operations/lib/local-markdown-links.mjs"
+              ],
+              "arguments": []
+            },
+            "prerequisite": {
+              "version-arguments": [
+                "--version"
+              ],
+              "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
+            },
+            "timeout-seconds": 30
+          }
+        ],
+        "fixes": [],
+        "kind": "repository",
+        "guidance": "guidance/typescript-node-stack.md",
+        "rules": "rules/typescript-node-stack.md",
+        "discovery": "discovery/typescript-node-stack.md",
+        "discovery-script": {
+          "run": {
+            "executable": "node",
+            "script": "discovery/draft-typescript-node-stack-scope.mjs",
+            "resources": [
+              "operations/lib/typescript-node-stack.mjs",
+              "operations/lib/local-markdown-links.mjs"
+            ],
+            "arguments": []
+          },
+          "prerequisite": {
+            "version-arguments": [
+              "--version"
+            ],
+            "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
+          },
+          "timeout-seconds": 60
+        },
+        "optional": true
+      },
+      {
+        "id": "validator-command",
+        "checks": [],
+        "fixes": [],
+        "kind": "file",
+        "target": "scripts/validate.mjs",
+        "exact": "scripts/validate.mjs"
       }
     ]
   },
   "discovery": {
-    "identity": "sha256:bbac3e1cb173624b2394283d0c31cf0d98f9af2cc79a025d89283e1715e1f599",
+    "identity": "sha256:4605b1521e14d4ff06708f4466460c9311c711499a82b310fc0d2444e742b1b3",
     "proposal": {
       "format": "repo-standards/scope/v2",
       "declarations": [
@@ -1331,6 +1581,13 @@
           "coverage": "Inspected all tracked files, README.md, docs/development/README.md, .factory/config.json, and .factory/Dockerfile. Hemiciclo is planning-only with no app code, manifests, workspaces or internal Projects. scripts, operations, vendor and .agents are installed shared tooling or vendored resources; docs organizes documentation. No independently maintained app, service, library or tool needs a component README. Empty scope is intentional.",
           "candidates": [],
           "unresolved": []
+        },
+        {
+          "id": "typescript-node-stack",
+          "coverage": "Drafted from manifests and workspace configuration by `discovery/draft-typescript-node-stack-scope.mjs`: one `package.json` per Project, included when it matches the stack's manifest facts and excluded naming its differences otherwise. A maintained workspace root package is a Project alongside its members; a shared-only root is not. Uncertain root membership stays unresolved. A root package without workspace members is a Project. The repository holds no Node.js Project, so the declaration has no scope.",
+          "candidates": [],
+          "unresolved": [],
+          "noScope": true
         }
       ]
     },
@@ -1349,11 +1606,75 @@
         }
       }
     },
+    "drafts": [
+      {
+        "id": "documentation",
+        "coverage": "Drafted from the repository tree by `discovery/draft-documentation-scope.mjs`: every file Git keeps under the documentation root `docs`, a new index for each of its directories without one, the development guide, and the domain glossaries and context maps the rules identify. Paths other declarations own are left out, and so is each README.md outside the documentation roots. Link-repair files and move destinations enter when the work needs them.",
+        "candidates": [
+          {
+            "path": "docs/README.md",
+            "decision": "include",
+            "reason": "A file under the documentation root `docs`.",
+            "evidence": [
+              "docs/README.md"
+            ]
+          },
+          {
+            "path": "docs/agents/README.md",
+            "decision": "exclude",
+            "reason": "Owned by the `agent-configuration-index` declaration.",
+            "evidence": [
+              "docs/agents/README.md"
+            ]
+          },
+          {
+            "path": "docs/agents/domain.md",
+            "decision": "exclude",
+            "reason": "Owned by the `domain-configuration` declaration.",
+            "evidence": [
+              "docs/agents/domain.md"
+            ]
+          },
+          {
+            "path": "docs/agents/issue-tracker.md",
+            "decision": "exclude",
+            "reason": "Owned by the `issue-tracker-configuration` declaration.",
+            "evidence": [
+              "docs/agents/issue-tracker.md"
+            ]
+          },
+          {
+            "path": "docs/agents/triage-labels.md",
+            "decision": "exclude",
+            "reason": "Owned by the `triage-label-configuration` declaration.",
+            "evidence": [
+              "docs/agents/triage-labels.md"
+            ]
+          },
+          {
+            "path": "docs/development/README.md",
+            "decision": "include",
+            "reason": "A file under the documentation root `docs`.",
+            "evidence": [
+              "docs/development/README.md"
+            ]
+          }
+        ],
+        "unresolved": []
+      },
+      {
+        "id": "typescript-node-stack",
+        "coverage": "Drafted from manifests and workspace configuration by `discovery/draft-typescript-node-stack-scope.mjs`: one `package.json` per Project, included when it matches the stack's manifest facts and excluded naming its differences otherwise. A maintained workspace root package is a Project alongside its members; a shared-only root is not. Uncertain root membership stays unresolved. A root package without workspace members is a Project. The repository holds no Node.js Project, so the declaration has no scope.",
+        "candidates": [],
+        "unresolved": [],
+        "noScope": true
+      }
+    ],
     "declarations": [
       {
         "id": "documentation",
         "source": "discovery/documentation.md",
-        "sha256": "0e84c6f5a53f8799568bef21f593c9544a7177428bbda6c8d5be0c594af1f9f7",
+        "sha256": "6ddffc023dfc46f7d11f292a245f8b9ffeffb77dff2f102baa20256af1dc8bfc",
         "executable": false
       },
       {
@@ -1373,6 +1694,12 @@
         "source": "discovery/project-readmes.md",
         "sha256": "a2cf9e7206712b7b169ebcf901d40ded7fa655100b3afbcf825296e46291b47a",
         "executable": false
+      },
+      {
+        "id": "typescript-node-stack",
+        "source": "discovery/typescript-node-stack.md",
+        "sha256": "0ac8fb30073e6b656d8456e1f0c7cd21a5e17668494402d39ee103270824e3f9",
+        "executable": false
       }
     ],
     "observation": {
@@ -1389,7 +1716,7 @@
         },
         ".agents/skills/babysit/SKILL.md": {
           "type": "file",
-          "sha256": "f17de7f5068281d3ef188e08861d106d9ef3aff377f76e62f792284d9c89feca",
+          "sha256": "5e3a33c571b8d09983b6a18600ecf7b218b487c5ea111712728fe1a808241387",
           "executable": false
         },
         ".agents/skills/babysit/merge.mjs": {
@@ -1805,7 +2132,7 @@
         },
         "CONTRIBUTING.md": {
           "type": "file",
-          "sha256": "a1e6d09d5957e84812609c295f5a0fdbf9777ac9e005338758b74940c4bec7cc",
+          "sha256": "4ed2b1336f77e4af7bc8c86b9497d6696c14a38b5d7a98f5a97df4d0c71aedd2",
           "executable": false
         },
         "LICENSE": {

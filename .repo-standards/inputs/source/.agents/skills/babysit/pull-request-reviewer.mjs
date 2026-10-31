@@ -16,7 +16,16 @@ export const readReviewer = (root = process.cwd()) => {
     if (error.code === "ENOENT") return null;
     throw error;
   }
-  const reviewer = JSON.parse(text);
+  return parseReviewer(text);
+};
+
+export const parseReviewer = (text) => {
+  let reviewer;
+  try {
+    reviewer = JSON.parse(text);
+  } catch (error) {
+    throw new Error(`${reviewerTarget}: ${error.message}`, { cause: error });
+  }
   validateReviewer(reviewer);
   return reviewer;
 };
@@ -88,6 +97,8 @@ const validateReviewer = (reviewer) => {
     textField(reviewer.finished.line, "reviewer.finished.line");
     let groups;
     try {
+      // Validate the standalone pattern exactly as completion matching uses it.
+      new RegExp(reviewer.finished.line, "u");
       // The empty alternative exposes every named group even without a match.
       groups = new RegExp(`(?:${reviewer.finished.line})|`, "u").exec(
         "",
