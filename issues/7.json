@@ -1,0 +1,21 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABVeSydQ",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "## Question\n\nWhat goes in the Lexicon's v1 seed? Which forms of government make up the controlled vocabulary, with what definitions? And which reserved words does the seed list, each marked *defined*, *quote-only* or *banned*, with a definition or a reason? The seed must be enough to write and check Briefs for the four soak-test countries.",
+    "author": "lutzseverino",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "created:I_kwDOU-q6R88AAAABVeSydQ",
+      "editedAt": null
+    }
+  },
+  "notice": null,
+  "cutoffBodyEdit": {
+    "id": "created:I_kwDOU-q6R88AAAABVeSydQ",
+    "editedAt": null
+  }
+}
