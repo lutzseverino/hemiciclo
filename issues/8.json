@@ -1,0 +1,21 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABVeSzTQ",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "## Question\n\nWhich framing signals and leaning signals does the classifier report, and with what precise criteria for each, worded so that Jev, a literal zero-shot classifier, can answer them? Framing signals come first: article type, attribution ratio, Lexicon-flagged loaded terms, one-sided sourcing and emotional intensity. Leaning signals are multi-axis and relative to each country's own spectrum. Decide the axes, the scales, and how confidence is shown.",
+    "author": "lutzseverino",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "created:I_kwDOU-q6R88AAAABVeSzTQ",
+      "editedAt": null
+    }
+  },
+  "notice": null,
+  "cutoffBodyEdit": {
+    "id": "created:I_kwDOU-q6R88AAAABVeSzTQ",
+    "editedAt": null
+  }
+}
