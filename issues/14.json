@@ -1,0 +1,21 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABVeYQfQ",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "## Question\n\nHow does a Country Brief state who holds government (the ruling party or coalition) when no free source supplies government composition worldwide? Wikidata gives only the head of government's own party, and Parline gives seats, not who governs (in Spain the largest party is not in government), per [the metadata findings](https://github.com/lutzseverino/hemiciclo/blob/research/political-metadata-sources/docs/development/research/political-metadata-sources.md). Options include stating the coalition in the Generator's prose with attributed sources, showing the head of government's party as a labelled proxy, or a hand-maintained table for followed countries. Decide which, and how the Brief marks where the fact came from.\n",
+    "author": "lutzseverino",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "created:I_kwDOU-q6R88AAAABVeYQfQ",
+      "editedAt": null
+    }
+  },
+  "notice": null,
+  "cutoffBodyEdit": {
+    "id": "created:I_kwDOU-q6R88AAAABVeYQfQ",
+    "editedAt": null
+  }
+}
