@@ -1,0 +1,21 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABVeS16Q",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "## Question\n\nHow should the Country Dashboard look and behave? Prototype rough UI for a Country Brief and the \"We're still gathering data\" placeholder. Include how sources, the model and generation time, and Lexicon definitions are shown. Decide the layout the spec will describe.",
+    "author": "lutzseverino",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "created:I_kwDOU-q6R88AAAABVeS16Q",
+      "editedAt": null
+    }
+  },
+  "notice": null,
+  "cutoffBodyEdit": {
+    "id": "created:I_kwDOU-q6R88AAAABVeS16Q",
+    "editedAt": null
+  }
+}
