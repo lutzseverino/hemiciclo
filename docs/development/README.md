@@ -15,5 +15,5 @@ Run `git diff --check` before opening a pull request. The required `PR metadata`
 check validates pull request titles and descriptions. The `Issue contracts`
 workflow validates specification and implementation ticket bodies and their
 readiness labels whenever an issue or its comments change. The `Sandbox image`
-workflow builds `.factory/Dockerfile`, the toolchain image that the factory
+workflow builds `.scriptorium/Dockerfile`, the toolchain image that the factory
 serving this repository runs its agents in, on pull requests that change it.
