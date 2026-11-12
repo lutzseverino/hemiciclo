@@ -13,7 +13,14 @@
       "editedAt": null
     }
   },
-  "notice": null,
+  "notice": {
+    "id": 6817449247,
+    "body": "<!-- repo-canon:issue-contract-feedback -->\n<!-- repo-canon:issue-contract-state {\"format\":\"repo-canon/issue-contract-state/v2\",\"status\":\"no-contract\",\"kind\":\"bug report\",\"revision\":null,\"source\":null,\"label\":null,\"reviewer\":null,\"reviewEventId\":null,\"event\":{\"kind\":\"edited\",\"actor\":\"lutzseverino\",\"label\":null,\"commentId\":null},\"evaluatedAt\":\"2026-11-12T18:30:07Z\",\"observedEventId\":null,\"sourceInvalidation\":null,\"publishedAt\":null,\"rejectionReason\":null,\"rejectedCreationLabel\":null,\"selection\":{\"mode\":\"body\",\"cutoff\":{\"id\":\"759959ba9f517e6558ad6d9c57e79a971d890631\",\"release\":\"v0.27.0\",\"sha\":\"eb5a5d74c2bb695bfdeefba12d962a47f29f7f7e\",\"epoch\":\"2026-11-12T18:15:29.990Z\"},\"state\":\"native\",\"reason\":null},\"observation\":\"sha256:ed8a7211c2d5110652803f05e043993bd945313941061f172ee462fbf3a7584e\",\"factoryTriage\":null} -->\n## Issue contract not required\n\nThe bug report has the required structure and carries no implementation contract, so it carries no readiness.",
+    "user": {
+      "login": "github-actions[bot]"
+    },
+    "updated_at": "2026-11-12T18:30:07Z"
+  },
   "cutoffBodyEdit": {
     "id": "created:I_kwDOU-q6R88AAAABejDlXw",
     "editedAt": null
