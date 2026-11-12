@@ -1,0 +1,21 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABVeS29w",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "## Question\n\nWhat is the Brief bundle schema, and what is the Generation Request lifecycle? Cover what the agent thread posts to the ingest endpoint and how the endpoint is protected. Cover how requests are recorded, gated to the owner during the soak test, picked up by the scheduled thread, retried and expired. Cover the freshness rules for followed countries and what mock fixtures contain. The schema must let an API-backed generator replace the thread without changing the app.",
+    "author": "lutzseverino",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "created:I_kwDOU-q6R88AAAABVeS29w",
+      "editedAt": null
+    }
+  },
+  "notice": null,
+  "cutoffBodyEdit": {
+    "id": "created:I_kwDOU-q6R88AAAABVeS29w",
+    "editedAt": null
+  }
+}
