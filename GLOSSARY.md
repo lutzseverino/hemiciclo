@@ -2,7 +2,9 @@
 
 Hemiciclo gives a neutral, at-a-glance view of each country's political situation and classifies news articles by how they frame events. Its language centres on neutrality: what a text may assert in Hemiciclo's own voice, and what it must attribute.
 
-## Country view
+## Language
+
+### Country view
 
 **Country Dashboard**:
 The page that shows one country's current political situation, centred on its Country Brief.
@@ -16,7 +18,7 @@ _Avoid_: Summary, overview, report
 A country the owner chose to keep current, so that its Country Brief is refreshed daily.
 _Avoid_: Favourite, subscription
 
-## Neutrality
+### Neutrality
 
 **Narration rules**:
 The four rules that every sentence in Hemiciclo's own voice must satisfy: actor-action-aim attribution, no unattributed causal connectives, describing mechanism rather than intent, and numbers rather than intensifiers.
@@ -42,7 +44,7 @@ _Avoid_: Loaded word, banned word
 The Lexicon term that describes how a country is governed, taken by default from its constitution.
 _Avoid_: Regime, regime type, system
 
-## Articles
+### Articles
 
 **Article Lens**:
 The capability that takes one pasted article and returns its classification and, later, its overview.
@@ -60,16 +62,16 @@ _Avoid_: Bias, political score, left-right rating
 An outlet's profile, aggregated from the framing and leaning signals of its articles.
 _Avoid_: Media bias rating, source rating
 
-## Generation
+### Generation
 
 **Generation Request**:
 A record that a Country Brief or article overview is wanted and not yet produced.
 _Avoid_: Job, task, ticket
 
 **Brief bundle**:
-The schema-conforming package that a generator delivers to Hemiciclo, containing a Country Brief and its sources.
+The schema-conforming package that a Generator delivers to Hemiciclo, containing a Country Brief and its sources.
 _Avoid_: Payload, export
 
 **Generator**:
-Whatever produces Brief bundles outside the app, currently a scheduled headless Claude Code job on the owner's account.
+Whatever produces Brief bundles outside the app.
 _Avoid_: Worker, bot, AI
