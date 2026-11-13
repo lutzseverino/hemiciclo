@@ -15,13 +15,13 @@ A short, fixed-section account of a country's political situation on a given day
 _Avoid_: Summary, overview, report
 
 **Followed country**:
-A country the owner chose to keep current, so that its Country Brief is refreshed daily.
+A country whose Country Brief is refreshed daily. How a country becomes followed is not yet specified.
 _Avoid_: Favourite, subscription
 
 ### Neutrality
 
 **Narration rules**:
-The four rules that every sentence in Hemiciclo's own voice must satisfy: actor-action-aim attribution, no unattributed causal connectives, describing mechanism rather than intent, and numbers rather than intensifiers.
+The four rules that every sentence in Hemiciclo's own voice must satisfy: actor-action-aim attribution, no causal or adversative connective in Hemiciclo's own voice, describing mechanism rather than intent, and numbers rather than intensifiers.
 _Avoid_: Style guide, tone guidelines
 
 **Own voice**:
