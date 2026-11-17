@@ -1,11 +1,12 @@
 # Installed rules
 
-These rules come from https://github.com/lutzseverino/repo-canon v0.27.0, profile factory.
+These rules come from https://github.com/lutzseverino/repo-canon v0.29.0, profile factory.
 Repo Standards installs and verifies them; adopt again to change them.
 Run `repo-standards rules <path>` to print the rules that cover a path.
 
 - [`comments`](comments.md) covers the whole repository.
 - [`documentation`](documentation.md) covers:
+  - `GLOSSARY.md`
   - `docs/README.md`
   - `docs/development/README.md`
 - [`factory-sandbox-image`](factory-sandbox-image.md) covers:
