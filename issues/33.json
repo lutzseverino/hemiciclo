@@ -15,11 +15,11 @@
   },
   "notice": {
     "id": 6817449247,
-    "body": "<!-- repo-canon:issue-contract-feedback -->\n<!-- repo-canon:issue-contract-state {\"format\":\"repo-canon/issue-contract-state/v2\",\"status\":\"no-contract\",\"kind\":\"bug report\",\"revision\":null,\"source\":null,\"label\":null,\"reviewer\":null,\"reviewEventId\":null,\"event\":{\"kind\":\"unlabeled\",\"actor\":\"lutzseverino\",\"label\":\"factory:failed\",\"commentId\":null},\"evaluatedAt\":\"2026-11-17T23:26:27Z\",\"observedEventId\":null,\"sourceInvalidation\":null,\"publishedAt\":null,\"rejectionReason\":null,\"rejectedCreationLabel\":null,\"selection\":{\"mode\":\"body\",\"cutoff\":{\"id\":\"759959ba9f517e6558ad6d9c57e79a971d890631\",\"release\":\"v0.27.0\",\"sha\":\"eb5a5d74c2bb695bfdeefba12d962a47f29f7f7e\",\"epoch\":\"2026-11-12T18:15:29.990Z\"},\"state\":\"native\",\"reason\":null},\"observation\":\"sha256:1754c719c38c21fb418adf471bdbfe16e458445982c751a0c360bc4bffcff1a7\",\"factoryTriage\":null} -->\n## Issue contract not required\n\nThe bug report has the required structure and carries no implementation contract, so it carries no readiness.",
+    "body": "<!-- repo-canon:issue-contract-feedback -->\n<!-- repo-canon:issue-contract-state {\"format\":\"repo-canon/issue-contract-state/v2\",\"status\":\"no-contract\",\"kind\":\"bug report\",\"revision\":null,\"source\":null,\"label\":null,\"reviewer\":null,\"reviewEventId\":null,\"event\":{\"kind\":\"labeled\",\"actor\":\"lutzseverino\",\"label\":\"priority:low\",\"commentId\":null},\"evaluatedAt\":\"2026-11-18T15:36:17Z\",\"observedEventId\":null,\"sourceInvalidation\":null,\"publishedAt\":null,\"rejectionReason\":null,\"rejectedCreationLabel\":null,\"selection\":{\"mode\":\"body\",\"cutoff\":{\"id\":\"759959ba9f517e6558ad6d9c57e79a971d890631\",\"release\":\"v0.27.0\",\"sha\":\"eb5a5d74c2bb695bfdeefba12d962a47f29f7f7e\",\"epoch\":\"2026-11-12T18:15:29.990Z\"},\"state\":\"native\",\"reason\":null},\"observation\":\"sha256:8d846bdea8a4c880fc5fe5785803eea4ccda554d7895b49a074750d251a07cf3\",\"factoryTriage\":null} -->\n## Issue contract not required\n\nThe bug report has the required structure and carries no implementation contract, so it carries no readiness.",
     "user": {
       "login": "github-actions[bot]"
     },
-    "updated_at": "2026-11-17T23:26:27Z"
+    "updated_at": "2026-11-18T15:36:17Z"
   },
   "cutoffBodyEdit": {
     "id": "created:I_kwDOU-q6R88AAAABejDlXw",
