@@ -12,5 +12,13 @@
       "id": "UCE_lAHOU-q6R88AAAABgbUaQc8AAAABMsUUyg",
       "editedAt": "2026-11-20T15:38:25Z"
     }
+  },
+  "notice": {
+    "id": 7049222302,
+    "body": "<!-- repo-canon:issue-contract-feedback -->\n<!-- repo-canon:issue-contract-state {\"format\":\"repo-canon/issue-contract-state/v2\",\"status\":\"needs-attention\",\"kind\":\"feature request\",\"revision\":null,\"source\":null,\"label\":null,\"reviewer\":null,\"reviewEventId\":null,\"event\":{\"kind\":\"commentCreated\",\"actor\":\"lutzseverino\",\"label\":null,\"commentId\":\"7049215788\"},\"evaluatedAt\":\"2026-11-20T19:55:29Z\",\"observedEventId\":null,\"sourceInvalidation\":null,\"publishedAt\":null,\"rejectionReason\":null,\"rejectedCreationLabel\":null,\"selection\":{\"mode\":\"body\",\"cutoff\":{\"id\":\"759959ba9f517e6558ad6d9c57e79a971d890631\",\"release\":\"v0.27.0\",\"sha\":\"eb5a5d74c2bb695bfdeefba12d962a47f29f7f7e\",\"epoch\":\"2026-11-12T18:15:29.990Z\"},\"state\":\"native\",\"reason\":null},\"observation\":\"sha256:5c43b6ea3598efebd4661de9f8a5d34b1868c6bd9ca03e3ae58c34866624e343\",\"factoryTriage\":null} -->\n## Issue contract needs attention\n\n- Apply exactly one category label: `type:bug` or `type:enhancement`.\n- Use the `type:enhancement` category for this issue form.\n\nFix the items above. Structural validation will re-run, but only an authorized reviewer can grant readiness.",
+    "user": {
+      "login": "github-actions[bot]"
+    },
+    "updated_at": "2026-11-20T19:55:30Z"
   }
 }
