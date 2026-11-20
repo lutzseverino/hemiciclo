@@ -1,0 +1,16 @@
+{
+  "issue": "I_kwDOU-q6R88AAAABgbUaQQ",
+  "cutoff": "759959ba9f517e6558ad6d9c57e79a971d890631",
+  "migrated": false,
+  "retired": false,
+  "intake": {
+    "original": "### Problem\n\nThe headless update of `main` to repo-canon `v0.31.0` with CLI `11.0.1` stopped with outcome `answers-required`: it needs answers or decisions that only an agent or a person can give.\n\n### Desired outcome\n\nThe default branch's selection reaches CLI `11.0.1` and repo-canon `v0.31.0`. To have the action try this release again, such as after changing its agent command, close this issue and run its workflow again. Otherwise, in a clean checkout of `main`, run `npx --yes @lutzseverino/repo-standards@11.0.1 adopt --json`, follow what it prints, and open the adoption pull request. This issue closes once the update lands on `main`, or a newer release replaces it.\n\n### Additional context\n\nThe CLI pin stays at `11.0.1`. The repo-canon standards pin moves from `v0.29.0` to `v0.31.0`, a new minor version of a 0.x release, which SemVer allows to break.\n\nAdopter action: Contextual update: 8 declarations differ from the retained inputs. It defers remote setup, which the next local `adopt` applies once its probe is ready: `github-repository-configuration/canonical-labels`, `github-repository-configuration/pull-request-integration`.\n\nOpen questions:\n\n- `scope:comments`: Which project files does comments cover? A prefilled proposal awaits review.\n- `scope:factory-workflow`: Which project files does factory-workflow cover? A prefilled proposal awaits review.\n- `scope:github-repository-configuration`: Which project files does github-repository-configuration cover? A prefilled proposal awaits review.\n\n<!-- repo-standards:rolling-update {\"cli\":\"11.0.1\",\"standards\":\"v0.31.0\"} -->\n",
+    "author": "github-actions[bot]",
+    "writerRun": null,
+    "writerProof": null,
+    "sourceEdit": {
+      "id": "UCE_lAHOU-q6R88AAAABgbUaQc8AAAABMsUUyg",
+      "editedAt": "2026-11-20T15:38:25Z"
+    }
+  }
+}
